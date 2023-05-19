@@ -8,21 +8,21 @@
     <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
     <meta property="og:image" itemprop="image" content="public/img/icons/opengraph.jpg">
     <meta property="og:image:alt" content="public/img/icons/opengraph.jpg">
-    <link rel="shortcut icon" href="public/img/icons/favicon.png">
-    <link rel="stylesheet" href="./public/css/animate.css">
-    <link rel="stylesheet" href="./public/css/main.css">
-    <link rel="stylesheet" href="./public/css/rodrigo.css">
+    <link rel="shortcut icon" href="../public/img/icons/favicon.png">
+    <link rel="stylesheet" href="../public/css/animate.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/rodrigo.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="nav-logo">
-                <!-- <img src="./public/img/icons/icon-header.png" alt="Oben icon"> -->
+                <!-- <img src="../public/img/icons/icon-header.png" alt="Oben icon"> -->
             </div>
             <div class="nav-user">
                 <a class="nav-options"> 
                     <div class="logo-user-home">
-                        <img src="./public/img/icons/icon-user-orange.svg" alt="Oben icon">
+                        <img src="../public/img/icons/icon-user-orange.svg" alt="Oben icon">
                     </div>
                     <div class="name-user">
                         <h2>Juan Vivar</h2>
@@ -39,14 +39,13 @@
     </nav>
 
     <section>
-
         
         <div class="crea-main flex-wrapper">
 
             <div class="wrapper">
 
                 <div class="nav-logo-new">
-                    <img src="./public/img/icons/icon-header.png" alt="Oben icon">
+                    <img src="../public/img/icons/icon-header.png" alt="Oben icon">
                 </div>
 
                 <div class="sidebar">
@@ -83,116 +82,71 @@
             <div class="m-container historico">
                 <div class="historico-solicitudes">
                     <h1>Mi perfil</h1>
-                    <!-- <a href="edit-profile2.html"><img src="public/img/icons/icon-edit.png" alt=""></a> -->
+                    <a href="edit-profile2.html"><img src="public/img/icons/icon-edit.png" alt=""></a>
                 </div>
 
                 <div class="form-perfil">
                     <div class="r-inputs d-flex">
                         <div class="item-input d-flexc">
                             <label for="">Nombres:</label>
-                            <input class="black" type="text" value="Juan Alonso" value="">
+                            <input type="text" placeholder="Juan Alonso" readonly>
                         </div>
 
                         <div class="item-input d-flexc">
                             <label for="">Apellidos:</label>
-                            <input class="black" type="text" value="Perez Chavez">
+                            <input type="text" placeholder="Perez Chavez" readonly>
                         </div>
                     </div>
 
                     <div class="r-inputs d-flex">
                         <div class="item-input d-flexc">
                             <label for="">Correo:</label>
-                            <input class="black" type="text" value="juanperez@gmail.com">
+                            <input type="text" placeholder="juanperez@gmail.com" readonly>
                         </div>
 
                         <div class="item-input d-flexc">
                             <label for="">Teléfono:</label>
-                            <input class="black" type="text" value="977485697">
+                            <input type="text" placeholder="977485697" readonly>
                         </div>
                     </div>
 
                     <div class="r-inputs d-flex">
                         <div class="item-input d-flexc">
                             <label for="">DNI</label>
-                            <input class="black" type="text" value="79854588" >
+                            <input type="text" placeholder="79854588" readonly>
                         </div>
 
                         <div class="item-input d-flexc">
                             <label for="">Parentesco con el alumno</label>
-                            <div class="f-desplegable s-profile">
-                                
-                                <div class="box-filtro">
-                                    <div class="intranet-select c-witdh s-perfil"><!-- Custom select for intranet-->
-                                        <h1>Padre</h1><!-- Placeholder-->
-                                                <div class="i-options"> <!-- Options -->
-                                                    <span value="opcion 1" selected>Padre</span>
-                                                    <span value="opcion 2">Madre</span>
-                                                </div>
-                                    </div>
-                                </div>                        
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="r-inputs d-flex">
-                        <div class="item-input d-flexc">
-                            <label for="">Nueva contraseña:</label>
-                            <input  class="black" type="password" value="">
-                        </div>
-
-                        <div class="item-input d-flexc">
-                            <label for="">Confirmar contraseña:</label>
-                            <input  class="black" type="password" value="">
+                            <input type="text" placeholder="Padre" readonly>
                         </div>
                     </div>
 
                     
 
                 </div>
-
-                <div class="btn-edit-profile d-flex">
-
-                    <div class="btn-filtrar btn-left ">
-                        <a href="edit-profile.html">
-                            <button>Cancelar</button>
-                        </a>
-                    </div>
-
-                    <div class="btn-filtrar ">
-                        <a onclick="ModalgenerarMatricula($(this))">
-                            <button>Guardar</button>
-                        </a>
-                    </div>
-
-                </div>
                
             </div>
         </div>
     </section>
-
-<!-- inicio modal -->
-<div id="modal-generarmatricula" class="m-crea-modal">
-    <div class="m-crea-modal__background">
-        <div class="m-crea-modal__container m-crea__cot ">
-            <!-- <a class="modal-btn__close"></a> -->
-            <div class="m-crea-modal__content">
-                <img src="./public/img/icons/icon-checked-modal.svg" alt="Oben icon">
-                <h2>¡Perfil editado!</h2>
-                <!-- <h3>Se ha actualizado correctamente la información</h3> -->
-                <a href="edit-profile.html">
+    <div class="m-crea-modal">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container m-crea__cot">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
+                    <h2>¡Datos guardados <br>
+                         correctamente!</h2>
                     <button class="btn-modal btn-modal-close">Continuar</button>
-                </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- fin modal -->
-
     <footer>
         <div class="f-container">
             <div class="footer-content top">
                 <div class="footer-slot">
-                    <img src="./public/img/icons/icon-footer.svg" alt="Oben icon">
+                    <img src="../public/img/icons/icon-footer.svg" alt="Oben icon">
                 </div>
                 <div class="footer-slot">
                     <h1>¿Necesitas ayuda?</h1>
@@ -204,12 +158,9 @@
             </div>
         </div>
     </footer>
-
-
-
-    <script src="./public/js/jquery.min.js"></script>
-    <script src="./public/js/wow.min.js"></script>
-    <script src="./public/js/main.js"></script>
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/wow.min.js"></script>
+    <script src="../admin/js/main.js"></script>
     <script type="text/javascript">
         new WOW().init();
     </script> 

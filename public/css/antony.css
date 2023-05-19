@@ -24,81 +24,162 @@
 }
 
 .registro-container {
-    height: 100vh;
+    height: 720px;
     padding: 28px;
-    margin: 50px auto;
+    margin: -20px auto;
+}
+
+.registro-apoderado {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.registro-apoderado h2,
+.registro-alumno h2 {
+    margin: 0px 0px 20px;
+}
+
+.formulario-apoderado {
+    width: 640px;
+}
+
+.input-box {
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-padron {
+    height: 45px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #CECECE;
+    background-color: #F9F9F9;
+    padding: 11px 15px 11px 15px;
+}
+
+.boton-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    font-size: 1em;
+    transition: .5s all;
+
+}
+
+.boton:hover,
+.enviar:hover {
+    cursor: pointer;
+    background: #0e669c;
+    color: white;
+}
+
+.boton-container-r {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-box-f {
+    display: flex;
+    margin: auto 0;
+    padding-bottom: 20px;
+    width: 350px;
+}
+
+.input-box-f label {
+    color: black;
+    font-weight: bold;
+    margin: auto 0;
+}
+
+.input-padron-f {
+    margin: auto auto auto 20px;
+    width: 50px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(58, 58, 58, 0.8);
+    z-index: 1;
+    visibility: hidden;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #6B6B6B;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.modal-content p {
+    color: #6B6B6B;
+    font-size: 16px;
+    margin: 15px 0;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.close button {
+    width: 117px;
+    height: 32px;
+    background: #00a1e4;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.close button:hover {
+    cursor: pointer;
+    background: #0e669c;
 }
 
 #form-alumno {
     display: none;
-}
-
-.container {
-    max-width: 650px;
-    padding: 28px;
-    margin: 0 28px;
-}
-
-h2 {
-    font-size: 20px;
-    text-align: left;
-    padding-bottom: 8px;
-}
-
-.formulario-apoderado {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.input-box {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    padding-bottom: 15px;
-}
-
-.input-box label {
-    width: 95%;
-    margin: 5px 0;
-    font-weight: bold;
-}
-
-.input-box input {
-    height: 40px;
-    width: 95%;
-    padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    outline: none;
-}
-
-.boton-container {
-    margin: 15px 0;
-}
-
-.boton-container button,
-.boton-container input {
-    /* width: 30%; */
-    display: block;
-    margin: 10px auto;
-    padding: 8px;
-    font-size: 15px;
-    background-color: rgb(94, 90, 90);
-    color: white;
-    border: 1px solid rgb(94, 90, 90);
-    border-radius: 5px;
-}
-
-button#boton {
-    cursor: pointer;
-}
-
-.fix-w{
-    width: 282px;
-}
-
-.fix-w.fix-margin{
-    margin-right: 10px;
 }

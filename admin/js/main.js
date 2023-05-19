@@ -54,11 +54,11 @@ function OpenSection(e) {
 
 
         case 'profile':
-            window.location.href = "/bgroup/edit-profile.html";
+            window.location.href = "/bgroup/admin/edit-profile.html";
             break;
 
         case 'logout':
-            window.location.href = "/bgroup/index.html";
+            window.location.href = "/bgroup/admin/index.html";
             break;
         // case 'new-historical':
         //     window.location.href = "/nueva-solicitud.html" ;
@@ -152,7 +152,7 @@ $('form').submit(function (e) {
                     e.preventDefault()
                     return
                 } else
-                    if (!(EMAIL.val() === 'hola@prueba.com' && PASSWORD.val() === '123456')) {
+                    if (!(EMAIL.val() === 'admin@gmail.com' && PASSWORD.val() === '123456')) {
                         MESSAGE.text('Correo electrónico o contraseña incorrectos.')
                         EMAIL.addClass('border-warning')
                         PASSWORD.addClass('border-warning')
@@ -294,6 +294,21 @@ const ModalgenerarMatricula = () => {
     $('#modal-generarmatricula').fadeIn(500);
 
 }
+const ModaldeleteRegistro = () => {
+    $('#modal-deleteRegistro').fadeIn(500);
+}
+
+const BtnAprobarMatricula = () => {
+    $('#modal-aprobar-matricula').fadeIn(500);
+}
+
+const BtnRechazarMatricula = () => {
+    $('#modal-rechazar-matricula').fadeIn(500);
+}
+
+const BtnCorregirMatricula = () => {
+    $('#modal-corregir-matricula').fadeIn(500);
+}
 
 
 
@@ -301,21 +316,15 @@ const ModalgenerarMatricula = () => {
 
 
 
-/*SCRIPS FOR REGISTER PAGE*/
 
-/*FUNCIONES PARA MOSTRAR Y OCULTAR FORMULARIOS DEL REGISTER*/
+
+
+/*SCRIPS DONE BY ANTONY*/
 function mostrar() {
     document.getElementById('form-alumno').style.display = 'block';
     document.getElementById('form-apoderado').style.display = 'none';
 }
 
-function ocultar() {
-    document.getElementById('form-alumno').style.display = 'none';
-    document.getElementById('form-apoderado').style.display = 'block';
-}
-
-
-/*FUNCIONES PARA LA PARTE DE GRADO Y SECCION*/
 
 const nivelAcademicoSelect = document.getElementById("nivel-academico");
 const resultadoSelect = document.getElementById("resultado");
@@ -350,19 +359,3 @@ nivelAcademicoSelect.addEventListener("change", function () {
         });
     }
 });
-
-/*FUNCIONES MODAL PARA FINALIZAR EL REGISTRO*/
-
-let openModal = document.getElementById('openModal');
-let modalMensaje = document.getElementById('modal');
-let closeModal = document.getElementById('closeModal')
-
-//Abrir Modal
-
-openModal.onclick = function () {
-    modalMensaje.style.visibility = "visible";
-}
-
-closeModal.onclick = function () {
-    modalMensaje.style.visibility = "hidden";
-}

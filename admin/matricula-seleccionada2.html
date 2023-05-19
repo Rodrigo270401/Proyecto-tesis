@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta property="og:image" itemprop="image" content="../public/img/icons/opengraph.jpg">
+    <meta property="og:image:alt" content="../public/img/icons/opengraph.jpg">
+    <link rel="shortcut icon" href="../public/img/icons/favicon.png">
+    <title>B.Group - Gestión de matrícula</title>
+    <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
+    <link rel="stylesheet" href="../public/css/animate.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/rodrigo.css">
+</head>
+<body>
+    <nav>
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <!-- <img src="../public/img/icons/icon-header.png" alt="Oben icon"> -->
+                </div>
+                <div class="nav-user">
+                    <a class="nav-options"> 
+                        <div class="logo-user-home">
+                            <img src="../public/img/icons/icon-user-orange.svg" alt="Oben icon">
+                        </div>
+                        <div class="name-user">
+                            <h2>Juan Vivar</h2>
+                        </div>
+                        <div class="user-menu-list">
+                            <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span>
+                            <span class="list logout" onclick="OpenSection($(this));" data-open="logout">Cerrar sesion</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+    </nav>
+
+    <section>    
+        <div class="crea-main flex-wrapper">
+            <div class="wrapper">
+
+                <div class="nav-logo-new">
+                    <img src="../public/img/icons/icon-header.png" alt="Oben icon">
+                </div>
+
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="../admin/home.html">
+                                <i class="icon home"></i>
+                                <span class="item">Inicio</span>
+                            </a>
+                        </li>                    
+                        <li>
+                            <a href="../admin/apoderados.html">
+                                <i class="icon clients"></i> 
+                                <span class="item">Apoderados</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/estudiantes.html">
+                                <i class="icon clients"></i> 
+                                <span class="item">Estudiantes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/gestion-matricula.html" class="active">
+                                <i class="icon fichas"></i>                          
+                                <span class="item">Gestión de matrícula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/gestion-vacantes.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Gestión de vacantes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/estado-matricula.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Estado de matrículas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/reporte-matricula.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Reporte de matrículas</span>
+                            </a>
+                        </li>
+                        
+                                      
+                   </ul>
+                </div>
+            </div>
+            
+            <div class="m-container home">                
+        
+                <div class="historico-solicitudes ">
+                    <div class="d-flex gt-matricula">
+                        <a href="../admin/gestion-matricula.html"><img src="../public/img/icons/icon-regresar.png" alt=""></a>
+                        <h1>Solicitud 10001 - Rodolfo Julian Gutierrez Gonzales</h1>
+                    </div>
+
+                   
+                    
+                </div>
+
+                <div class="box-estado">
+                    <h1>Estado:</h1>
+                    <div class="box-item correccion"><h2>Validacion de Pago</h2></div>
+                </div>
+
+                <div class="info-estudiante">
+                    <h1>Información del estudiante</h1>
+                    <div class="items-datos">
+                        <li>Nombre: Rodolfo Julian Gutierrez Gonzales</li>
+                        <li>Apoderado: Juan Alonso Chavez Perez</li>
+                        <li>Nivel académico: Secundaria</li>
+                        <li>Grado: 5to</li>
+                    </div>
+
+                </div>
+
+                <div class="info-estudiante documentos">
+                    <h1>Documentos adjuntados</h1>
+
+                    <div class="section-docs">
+
+                        <div class="flex-documentos-row">
+                            <div class="item-doc">
+                                <h2>1. Libreta de notas</h2>
+                                <div class="info-doc">
+                                    <div class="name-doc">
+                                        <img src="../public/img/icons/icon-file.png" alt="">
+                                        <h3>Libreta_notas.pdf</h2>
+                                    </div>
+
+                                    <div class="btn-ver-doc">
+                                        <a target="_blank" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Visualizar</button>
+                                        </a>
+                                    </div>
+
+                                    <div class="btn-download-doc">
+                                        <a target="_blank" download="" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Descargar</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="item-doc">
+                                <h2>2. Certidicado de conducta</h2>
+                                <div class="info-doc">
+                                    <div class="name-doc">
+                                        <img src="../public/img/icons/icon-file.png" alt="">
+                                        <h3>conducta.pdf</h2>
+                                    </div>
+
+                                    <div class="btn-ver-doc">
+                                        <a target="_blank" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Visualizar</button>
+                                        </a>
+                                    </div>
+
+                                    <div class="btn-download-doc">
+                                        <a target="_blank"download="" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Descargar</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-documentos-row">
+                            <div class="item-doc">
+                                <h2>3. Certificado de no adeudo</h2>
+                                <div class="info-doc">
+                                    <div class="name-doc">
+                                        <img src="../public/img/icons/icon-file.png" alt="">
+                                        <h3>certificado.pdf</h2>
+                                    </div>
+
+                                    <div class="btn-ver-doc">
+                                        <a target="_blank" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Visualizar</button>
+                                        </a>
+                                    </div>
+
+                                    <div class="btn-download-doc">
+                                        <a target="_blank" download="" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Descargar</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="item-doc">
+                                <h2>4. DNI escaneado</h2>
+                                <div class="info-doc">
+                                    <div class="name-doc">
+                                        <img src="../public/img/icons/icon-file.png" alt="">
+                                        <h3>dni_Escaneado.pdf</h2>
+                                    </div>
+
+                                    <div class="btn-ver-doc">
+                                        <a target="_blank" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Visualizar</button>
+                                        </a>
+                                    </div>
+
+                                    <div class="btn-download-doc">
+                                        <a target="_blank" download="" class="" href="../public/files/sample.pdf">
+                                            <button class="btn-tb-orange btn-download">Descargar</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    
+                    </div>
+
+                    <div class="flex-documentos-row">
+                        <div class="item-doc">
+                            <h2>Comprobante de pago</h2>
+                            <div class="info-doc">
+                                <div class="name-doc">
+                                    <img src="../public/img/icons/icon-file.png" alt="">
+                                    <h3>comprobante.pdf</h2>
+                                </div>
+
+                                <div class="btn-ver-doc">
+                                    <a target="_blank" class="" href="../public/files/sample.pdf">
+                                        <button class="btn-tb-orange btn-download">Visualizar</button>
+                                    </a>
+                                </div>
+
+                                <div class="btn-download-doc">
+                                    <a target="_blank" download="" class="" href="../public/files/sample.pdf">
+                                        <button class="btn-tb-orange btn-download">Descargar</button>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="info-estudiante acciones">
+                        <h1>Acciones</h1>
+                        <div class="btn-accions">
+                            <div class="btn-filtrar validate btn-f-estado validate-pay">
+                                <a onclick="BtnAprobarMatricula($(this))"><button>Validar pago de matrícula</button></a> 
+                             </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+
+    <div id="modal-aprobar-matricula" class="m-crea-modal">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container m-crea__cot">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
+                    <h2>¡Pago de matrícula <br>validado correctamente!</h2>
+                    <a href="/admin/gestion-matricula.html"><button class="btn-modal btn-modal-close">Continuar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="f-container">
+        <div class="footer-content top">
+            <div class="footer-slot">
+                <img src="../public/img/icons/icon-footer.svg" alt="Oben icon">
+            </div>
+            <div class="footer-slot">
+                <h1>¿Necesitas ayuda?</h1>
+                <small>Escríbenos a: <a href="mailto:soporte@bgroup.edu.pe">soporte@bgroup.edu.pe</a></small>
+            </div>
+        </div>
+        <div class="footer-content bottom">
+            <small>© 2023 B. Group. Todos los derechos reservados.</small>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function eliminarFila(enlace) {
+      var fila = enlace.parentNode.parentNode;
+      var tabla = fila.parentNode;
+      tabla.removeChild(fila);
+    }
+  </script>
+
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/wow.min.js"></script>
+    <script src="../admin/js/main.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script> 
+</body>
+</html>

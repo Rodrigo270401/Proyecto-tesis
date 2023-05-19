@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta property="og:image" itemprop="image" content="../public/img/icons/opengraph.jpg">
+    <meta property="og:image:alt" content="../public/img/icons/opengraph.jpg">
+    <link rel="shortcut icon" href="../public/img/icons/favicon.png">
+    <title>B.Group - Editar Estudiante</title>
+    <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
+    <link rel="stylesheet" href="../public/css/animate.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/rodrigo.css">
+</head>
+<body>
+    <nav>
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <!-- <img src="../public/img/icons/icon-header.png" alt="Oben icon"> -->
+                </div>
+                <div class="nav-user">
+                    <a class="nav-options"> 
+                        <div class="logo-user-home">
+                            <img src="../public/img/icons/icon-user-orange.svg" alt="Oben icon">
+                        </div>
+                        <div class="name-user">
+                            <h2>Juan Vivar</h2>
+                        </div>
+                        <div class="user-menu-list">
+                            <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span>
+                            <span class="list logout" onclick="OpenSection($(this));" data-open="logout">Cerrar sesion</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+    </nav>
+
+    <section>    
+        <div class="crea-main flex-wrapper">
+            <div class="wrapper">
+
+                <div class="nav-logo-new">
+                    <img src="../public/img/icons/icon-header.png" alt="Oben icon">
+                </div>
+
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="../admin/home.html">
+                                <i class="icon home"></i>
+                                <span class="item">Inicio</span>
+                            </a>
+                        </li>                    
+                        <li>
+                            <a href="../admin/apoderados.html">
+                                <i class="icon clients"></i> 
+                                <span class="item">Apoderados</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/estudiantes.html" class="active">
+                                <i class="icon clients"></i> 
+                                <span class="item">Estudiantes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/gestion-matricula.html">
+                                <i class="icon fichas"></i>                          
+                                <span class="item">Gestión de matrícula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/gestion-vacantes.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Gestión de vacantes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/estado-matricula.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Estado de matrículas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/reporte-matricula.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Reporte de matrículas</span>
+                            </a>
+                        </li>
+                        
+                                      
+                   </ul>
+                </div>
+            </div>
+            
+            <div class="m-container home">                
+        
+                <div class="historico-solicitudes edit-estudiantes">
+                    <h1>Editar Estudiante</h1>
+                    <img src="../public/img/icons/icon-edit.png" alt="">
+                </div>
+
+                <div class="form-perfil estudiantes">
+                    <div class="r-inputs d-flex">
+                        <div class="item-input d-flexc">
+                            <label for="">Nombres:</label>
+                            <input class="black" type="text" value="Marcelo Linch">
+                        </div>
+
+                        <div class="item-input d-flexc">
+                            <label for="">Apellidos:</label>
+                            <input class="black" type="text" value="Lopez Aliaga">
+                        </div>
+                    </div>
+
+                    <div class="r-inputs d-flex">
+                        <div class="item-input d-flexc">
+                            <label for="">DNI</label>
+                            <input class="black" type="text" value="79852412">
+                        </div>
+
+                        <div class="item-input d-flexc">
+                            <label for="">Fecha de nacimiento</label>
+                            <input class="black" type="date" value="2010-05-13">
+                        </div>
+                    </div>
+
+                    <div class="r-inputs d-flex">                        
+                        <div class="item-input d-flexc">
+                            <label for="">Nivel académico</label>
+                            <div class="f-desplegable s-profile">                                
+                                <div class="box-filtro">
+                                    <div class="intranet-select c-witdh s-perfil"><!-- Custom select for intranet-->
+                                        <h1>Primaria</h1><!-- Placeholder-->
+                                        <div class="i-options"> <!-- Options -->
+                                            <span value="opcion 1" selected>Primaria</span>
+                                            <span value="opcion 2">Secunadaria</span>
+                                        </div>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+
+                        <div class="item-input d-flexc">
+                            <label for="">Grado</label>
+                            <div class="f-desplegable s-profile">
+                                
+                                <div class="box-filtro">
+                                    <div class="intranet-select c-witdh s-perfil"><!-- Custom select for intranet-->
+                                        <h1>6to</h1><!-- Placeholder-->
+                                                <div class="i-options"> <!-- Options -->
+                                                    <span value="opcion 1">1ro</span>
+                                                    <span value="opcion 2">2do</span>
+                                                    <span value="opcion 3">3ro</span>
+                                                    <span value="opcion 4">4to</span>
+                                                    <span value="opcion 5">5to</span>
+                                                    <span value="opcion 6" selected>6to</span>
+                                                </div>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="r-inputs d-flex">
+                        <div class="item-input d-flexc">
+                            <label for="">Apoderado</label>
+                            <div class="f-desplegable s-profile">                                
+                                <div class="box-filtro">
+                                    <div class="intranet-select c-witdh s-perfil"><!-- Custom select for intranet-->
+                                        <h1>Ricardo Lopez Aliaga</h1><!-- Placeholder-->
+                                        <div class="i-options"> <!-- Options -->
+                                            <span value="opcion 1">Luis Castillo Ramirez</span>
+                                            <span value="opcion 2">Ariana Oviedo Rios</span>
+                                            <span value="opcion 3" selected>Ricardo Lopez Aliaga</span>
+                                            <span value="opcion 4">Juan Peres Garcia</span>
+                                        </div>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-edit-profile d-flex">
+
+                    <div class="btn-filtrar btn-left ">
+                        <a href="../admin/estudiantes.html">
+                            <button>Cancelar</button>
+                        </a>
+                    </div>
+
+                    <div class="btn-filtrar ">
+                        <a onclick="ModalgenerarMatricula($(this))">
+                            <button>Actualizar</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- inicio modal -->
+<div id="modal-generarmatricula" class="m-crea-modal">
+    <div class="m-crea-modal__background">
+        <div class="m-crea-modal__container m-crea__cot ">
+            <a class="modal-btn__close"></a>
+            <div class="m-crea-modal__content">
+                <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
+                <h2>¡Estudiante actualizado correctamente!</h2>
+                <!-- <h3>Se ha actualizado correctamente la información</h3> -->
+                <a href="">
+                    <button class="btn-modal btn-modal-close">Continuar</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin modal -->
+
+
+<footer>
+    <div class="f-container">
+        <div class="footer-content top">
+            <div class="footer-slot">
+                <img src="../public/img/icons/icon-footer.svg" alt="Oben icon">
+            </div>
+            <div class="footer-slot">
+                <h1>¿Necesitas ayuda?</h1>
+                <small>Escríbenos a: <a href="mailto:soporte@bgroup.edu.pe">soporte@bgroup.edu.pe</a></small>
+            </div>
+        </div>
+        <div class="footer-content bottom">
+            <small>© 2023 B. Group. Todos los derechos reservados.</small>
+        </div>
+    </div>
+</footer>
+
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/wow.min.js"></script>
+    <script src="../admin/js/main.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script> 
+</body>
+</html>

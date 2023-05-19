@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta property="og:image" itemprop="image" content="../public/img/icons/opengraph.jpg">
+    <meta property="og:image:alt" content="../public/img/icons/opengraph.jpg">
+    <link rel="shortcut icon" href="../public/img/icons/favicon.png">
+    <title>B.Group - Apoderados</title>
+    <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
+    <link rel="stylesheet" href="../public/css/animate.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/rodrigo.css">
+</head>
+<body>
+    <nav>
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <!-- <img src="../public/img/icons/icon-header.png" alt="Oben icon"> -->
+                </div>
+                <div class="nav-user">
+                    <a class="nav-options"> 
+                        <div class="logo-user-home">
+                            <img src="../public/img/icons/icon-user-orange.svg" alt="Oben icon">
+                        </div>
+                        <div class="name-user">
+                            <h2>Juan Vivar</h2>
+                        </div>
+                        <div class="user-menu-list">
+                            <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span>
+                            <span class="list logout" onclick="OpenSection($(this));" data-open="logout">Cerrar sesion</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+    </nav>
+
+    <section>    
+        <div class="crea-main flex-wrapper">
+            <div class="wrapper">
+
+                <div class="nav-logo-new">
+                    <img src="../public/img/icons/icon-header.png" alt="Oben icon">
+                </div>
+
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="../admin/home.html">
+                                <i class="icon home"></i>
+                                <span class="item">Inicio</span>
+                            </a>
+                        </li>                    
+                        <li>
+                            <a href="../admin/apoderados.html" class="active">
+                                <i class="icon clients"></i> 
+                                <span class="item">Apoderados</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/estudiantes.html">
+                                <i class="icon clients"></i> 
+                                <span class="item">Estudiantes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/gestion-matricula.html">
+                                <i class="icon fichas"></i>                          
+                                <span class="item">Gestión de matrícula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/gestion-vacantes.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Gestión de vacantes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/estado-matricula.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Estado de matrículas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../admin/reporte-matricula.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Reporte de matrículas</span>
+                            </a>
+                        </li>
+                        
+                                      
+                   </ul>
+                </div>
+            </div>
+            
+            <div class="m-container home">                
+        
+                <div class="historico-solicitudes ">
+                    <div><h1>Apoderados</h1></div>
+
+                    <div class="search">
+                        <div class="text">
+                            <img src="../public/img/icons/icon-search.svg" alt="">
+                            <input type="text" placeholder="Buscar apoderado">
+                        </div>                        
+                        <div class="btn-search">
+                            <button>Buscar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="resultados">
+                    <h1>Resultados (35):</h1>
+                    <div class="row-results d-flex">
+                        <a href="" class="a-btn-add">
+                            <div class="btn-add">
+                                <img src="../public/img/icons/icon-add-register.png" alt="">
+                                <h2>Añadir</h2>
+                            </div>
+                        </a>
+
+                        <div class="filtros f-estado"> 
+                            <div class="f-desplegable">
+                                <div class="title"><h2>Filtrar por estado</h2></div>
+                                <div class="box-filtro">
+                                    <div class="intranet-select c-witdh s-estado"><!-- Custom select for intranet-->
+                                        <h1>Elige una opción</h1><!-- Placeholder-->
+                                                <div class="i-options"> <!-- Options -->
+                                                    <span value="opcion 1">Activo</span>
+                                                    <span value="opcion 2">Inactivo</span>
+                                                </div>
+                                    </div>
+                                </div>                        
+                            </div>
+        
+                            <div class="btn-filtrar validate btn-f-estado">
+                               <a href=""><button>Filtrar</button></a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        
+                <div class="table-solicitudes">
+                    <table class="tb-sol">
+                        <thead>
+                            <tr>
+                                <th class="first">ID</th>
+                                <th style="width: 200px;">Nombre</th>
+                                <th style="width: 236px;">Correo</th>
+                                <th style="width: 72px;">DNI</th>
+                                <th style="width: 115px;">N° de<br>Estudiantes</th>
+                                <th style="width: 120px;">Fecha de <br> Registro</th>
+                                <th style="width: 90px;">Estado</th>
+                                <th class="last">Opciones</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody class="tbody">
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1001</td>
+                                <td>Jorge Ricardo Lopez Aliaga</td>
+                                <td>jlopez@gmail.com</td>
+                                <td>79852412</td>
+                                <td>01</td>
+                                <td>05-10-2022</td>
+                                <td>Activo</td>
+                                <td >                                    
+                                    <div class="opciones-items">
+                                        <a href=""><img class="edit expand-efect" src="../public/img/icons/icon-edit-item.svg" alt=""></a>
+                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
+                                    </div>                                    
+                                </td>
+                            </tr>
+
+                            
+
+                            
+                        </tbody>
+                    </table>
+        
+                    
+                </div> 
+
+                <div class="paginador">
+                    <img class="back" src="../public/img/icons/icon-paginador-left.png" alt="">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <img class="next" src="../public/img/icons/icon-paginador-right.png" alt="">
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div id="modal-deleteRegistro" class="m-crea-modal">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container m-crea__cot">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
+                    <h2>¡Apoderado eliminado <br> correctamente!</h2>
+                    <a href=""><button class="btn-modal btn-modal-close">Continuar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="f-container">
+        <div class="footer-content top">
+            <div class="footer-slot">
+                <img src="../public/img/icons/icon-footer.svg" alt="Oben icon">
+            </div>
+            <div class="footer-slot">
+                <h1>¿Necesitas ayuda?</h1>
+                <small>Escríbenos a: <a href="mailto:soporte@bgroup.edu.pe">soporte@bgroup.edu.pe</a></small>
+            </div>
+        </div>
+        <div class="footer-content bottom">
+            <small>© 2023 B. Group. Todos los derechos reservados.</small>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function eliminarFila(enlace) {
+      var fila = enlace.parentNode.parentNode;
+      var tabla = fila.parentNode;
+      tabla.removeChild(fila);
+    }
+  </script>
+
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/wow.min.js"></script>
+    <script src="../admin/js/main.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script> 
+</body>
+</html>
