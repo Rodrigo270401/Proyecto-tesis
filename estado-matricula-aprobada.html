@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta property="og:image" itemprop="image" content="public/img/icons/opengraph.jpg">
+    <meta property="og:image:alt" content="public/img/icons/opengraph.jpg">
+    <link rel="shortcut icon" href="public/img/icons/favicon.png">
+    <title>B.Group - Estado de Matrícula</title>
+    <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
+    <link rel="stylesheet" href="./public/css/animate.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/rodrigo.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <!-- <img src="./public/img/icons/icon-header.png" alt="Oben icon"> -->
+            </div>
+            <div class="nav-user">
+                <a class="nav-options"> 
+                    <div class="logo-user-home">
+                        <img src="./public/img/icons/icon-user-orange.svg" alt="Oben icon">
+                    </div>
+                    <div class="name-user">
+                        <h2>Juan Vivar</h2>
+                    </div>
+                    <div class="user-menu-list">
+                        <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span>
+                        <span class="list logout" onclick="OpenSection($(this));" data-open="logout">Cerrar sesion</span>
+                    </div>
+                </a>
+                
+            </div>
+        </div>        
+    </nav>
+
+    <section>
+    
+        <div class="crea-main flex-wrapper">
+
+            <div class="wrapper">
+
+                <div class="nav-logo-new">
+                    <img src="./public/img/icons/icon-header.png" alt="Oben icon">
+                </div>
+
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="home.html">
+                                <i class="icon home"></i>
+                                <span class="item">Inicio</span>
+                            </a>
+                        </li>                    
+                        <li>
+                            <a href="generar-matricula.html">
+                                <i class="icon fichas"></i>                          
+                                <span class="item">Generar matrícula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="estado-matricula.html"  class="active">
+                                <i class="icon docs"></i> 
+                                <span class="item">Estado de matrículas</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="estudiantes-registrados.html">
+                                <i class="icon clients"></i> 
+                                <span class="item">Estudiantes registrados</span>
+                            </a>
+                        </li>              
+                   </ul>
+                </div>
+            </div>
+
+            <div class="m-container historico">
+                
+                <div class="historico-solicitudes stock">
+                    <div><h1>Estado de matrícula</h1></div>
+                </div>
+
+                <div class="filtros"> 
+                    <div class="f-desplegable">
+                        <div class="title"><h2>Seleccionar estudiante</h2></div>
+                        <div class="box-filtro">
+                            <div class="intranet-select c-witdh"><!-- Custom select for intranet-->
+                                <h1>Carlos Antonio  Camacho Gutierrez</h1><!-- Placeholder-->
+                                        <div class="i-options"> <!-- Options -->
+                                            <a class="op-alumno" href="estado-matricula.html"><span value="opcion 1" >Luis Angel Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-rechazada.html"><span value="opcion 2" >Juan Manuel Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-correccion.html"><span value="opcion 3" >Ana Maria  Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-aprobada.html"><span value="opcion 4" selected >Carlos Antonio  Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-validacion.html"><span value="opcion 5" >Laura Sofia Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-pagado.html"><span value="opcion 6" >Jose Antonio Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-vacio.html"><span value="opcion 7" >Diego Percy Camacho Gutierrez</span></a>
+                                         </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="status-estado">
+                    <div class="box-estado">
+                        <h1>Estado:</h1>
+                        <div class="box-item aprobada"><h2>Aprobada</h2></div>
+                    </div>
+
+                    <div class="info-estado">
+                        <h1>Me complace informarle que su solicitud de matrícula ha sido <b>aprobada</b> .Esto significa que nuestra área administrativa ha evaluado minuciosamente los documentos adjuntos y ha determinado que cumplen con todos los requisitos necesarios para proceder con el proceso de matrícula para el presente año escolar.</h1>
+                        <img src="public/img/icons/icon-estado-aprobado.png" alt="">
+                    </div>
+
+                    <div class="info-estado col">
+                        <h1>Hemos enviado por correo electrónico la constancia de matrícula generada para el alumno: Luis Angel Camacho Gutierrez. De igual maner puede descargarlo por este medio.</h1>
+                        <a target="_blank" class="mrg-download" href="public/files/sample.pdf"><button class="btn-tb-orange btn-download">Descargar constancia</button></a>
+                    </div>
+
+                    <div class="info-estado col">
+                        <h1>El paso final para completar el proceso de mátricula sería el pago de la matrícula el cual es un monto de:<b> S/ 250.00 </b></h1>
+                        <!-- <a class="mrg-download" onclick=""><button class="btn-tb-orange btn-download">Ver opciones de pago</button></a> -->
+                    </div>
+
+                    <div class="info-estado col">
+                        <h1>Favor de adjuntar una evidencia del comprobante de pago para que el área administrativa pueda realizar la verificación del mismo.</h1>
+                        <div class="btn-subir-file">
+                            <input type="file" class="loadfile">
+                        </div>    
+                    </div>
+                </div>
+
+                
+
+                <div class="mtr-aprobada">
+                    <a onclick="ModalgenerarMatricula($(this))">
+                        <button class="btn-tb-orange btn-comprobante">Enviar comprobante de Pago</button>
+                    </a>
+                    
+                </div>
+
+                
+                       
+            </div>
+        </div>
+    </section>
+
+    <!-- inicio modal -->
+    <div id="modal-generarmatricula" class="m-crea-modal">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container m-crea__cot matricula">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <img src="./public/img/icons/icon-checked-modal.svg" alt="Oben icon">
+                    <h2>¡Envío exitoso!</h2>
+                    <h3>Recibiras un correo informativo con la respuesta de la validación del comprobante de pago</h3>
+                    <a href="estado-matricula-validacion.html">
+                        <button class="btn-modal btn-modal-close">Continuar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin modal -->
+
+    <footer>
+        <div class="f-container">
+            <div class="footer-content top">
+                <div class="footer-slot">
+                    <img src="./public/img/icons/icon-footer.svg" alt="Oben icon">
+                </div>
+                <div class="footer-slot">
+                    <h1>¿Necesitas ayuda?</h1>
+                    <small>Escríbenos a: <a href="mailto:soporte@bgroup.edu.pe">soporte@bgroup.edu.pe</a></small>
+                </div>
+            </div>
+            <div class="footer-content bottom">
+                <small>© 2023 B. Group. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/wow.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script> 
+</body>
+</html>

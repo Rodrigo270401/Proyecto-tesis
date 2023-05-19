@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta property="og:image" itemprop="image" content="public/img/icons/opengraph.jpg">
+    <meta property="og:image:alt" content="public/img/icons/opengraph.jpg">
+    <link rel="shortcut icon" href="public/img/icons/favicon.png">
+    <title>B.Group - Inicio</title>
+    <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
+    <link rel="stylesheet" href="./public/css/animate.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/rodrigo.css">
+</head>
+<body>
+    <nav>
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <!-- <img src="./public/img/icons/icon-header.png" alt="Oben icon"> -->
+                </div>
+                <div class="nav-user">
+                    <a class="nav-options"> 
+                        <div class="logo-user-home">
+                            <img src="./public/img/icons/icon-user-orange.svg" alt="Oben icon">
+                        </div>
+                        <div class="name-user">
+                            <h2>Juan Vivar</h2>
+                        </div>
+                        <div class="user-menu-list">
+                            <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span>
+                            <span class="list logout" onclick="OpenSection($(this));" data-open="logout">Cerrar sesion</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+    </nav>
+
+    <section>    
+        <div class="crea-main flex-wrapper">
+            <div class="wrapper">
+
+                <div class="nav-logo-new">
+                    <img src="./public/img/icons/icon-header.png" alt="Oben icon">
+                </div>
+
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                            <a href="home.html" class="active">
+                                <i class="icon home"></i>
+                                <span class="item">Inicio</span>
+                            </a>
+                        </li>                    
+                        <li>
+                            <a href="generar-matricula.html">
+                                <i class="icon fichas"></i>                          
+                                <span class="item">Generar matrícula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="estado-matricula.html">
+                                <i class="icon docs"></i> 
+                                <span class="item">Estado de matrículas</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="estudiantes-registrados.html">
+                                <i class="icon clients"></i> 
+                                <span class="item">Estudiantes registrados</span>
+                            </a>
+                        </li>              
+                   </ul>
+                </div>
+            </div>
+            
+            <div class="m-container home">
+                <!-- <div class="msj-bienvenida">
+                    <h1>¡Bienvenido Creasoft!</h1>
+                    
+                </div> -->
+        
+                <div class="ulitmas-solicitudes">
+                    <h1>Nuestros módulos</h1>
+                </div>
+        
+                <div class="modules">
+                    <div class="row-module">
+                        <div class="module">
+                            <img src="public/img/icons/icon-matricula.png" alt="">
+                            <a href="generar-matricula.html"><button class="btn-tb-orange btn-home">Generar matrícula</button></a>
+                        </div>
+                        <div class="module">
+                            <img src="public/img/icons/icon-st-matricula.png" alt="">
+                            <a href="estado-matricula.html"><button class="btn-tb-orange btn-home">Estado de matrícula</button></a>
+                        </div>
+                        <div class="module">
+                            <img src="public/img/icons/icon-miperfil.png" alt="">
+                            <a href="edit-profile.html"><button class="btn-tb-orange btn-home">Mi perfil</button></a>
+                        </div>
+                    </div>    
+                    
+                    <div class="row-module">                        
+                        <div class="module">
+                            <img src="public/img/icons/icon-estudiantes.png" alt="">
+                            <a href="estudiantes-registrados.html"><button class="btn-tb-orange btn-home">Estudiantes registrados</button></a>
+                        </div>
+                        
+                    </div> 
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="f-container">
+        <div class="footer-content top">
+            <div class="footer-slot">
+                <img src="./public/img/icons/icon-footer.svg" alt="Oben icon">
+            </div>
+            <div class="footer-slot">
+                <h1>¿Necesitas ayuda?</h1>
+                <small>Escríbenos a: <a href="mailto:soporte@bgroup.edu.pe">soporte@bgroup.edu.pe</a></small>
+            </div>
+        </div>
+        <div class="footer-content bottom">
+            <small>© 2023 B. Group. Todos los derechos reservados.</small>
+        </div>
+    </div>
+</footer>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/wow.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script> 
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+    <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>B.Group - Inicio de sesión</title>
+    <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
+    <meta property="og:image" itemprop="image" content="public/img/icons/opengraph.jpg">
+    <meta property="og:image:alt" content="public/img/icons/opengraph.jpg">
+    <link rel="shortcut icon" href="public/img/icons/favicon.png">
+    <link rel="stylesheet" href="./public/css/animate.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/rodrigo.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./public/img/icons/icon-header.png" alt="Oben icon">
+            </div>
+        
+        </div>
+    </nav>
+
+    
+    
+
+    <section>
+        
+        
+            <div class="crea-main">
+                <div class="m-container m-container-form">                    
+                    <div class="m-crea-form">
+                        <!-- <div class="m-crea-section left">
+                            <div class="m-crea__layout">
+                                <div class="m-crea__content">
+                                    <h2 class="wow fadeInLeft">Únete a la Intranet<br>de Oben</h2>
+                                    <div class="m-crea__button wow fadeInLeft">
+                                        <h1 class="subtitle">Registrar</h1>
+                                        <button class="btn btn-white  wow fadeInLeft" onclick="OpenSection($(this));" data-open="register">Nuevo Usuario</button>
+                                        <button class="btn btn-white  wow fadeInLeft" onclick="OpenSection($(this));" data-open="bussiness">Nueva Empresa</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="m-crea-section right inactive">
+                            <!-- <div class="m-crea__content inactive">
+                                <h2 class="wow fadeInRight">¿Ya tienes una <br> cuenta?</h2>
+                                <button class="btn btn-orange  wow fadeInRight" onclick="OpenSection($(this));" data-open="login">Iniciar sesión</button>
+                            </div> -->
+                            <div class="m-crea__content active">
+                                <h2 class="wow fadeInRight">Iniciar sesión</h2>
+                                <form class="wow fadeInRight m-login" action="/obengroup/home.html" method="post" data-form="login">
+                                    <div class="form-separator">
+                                        <label for="email">Correo electrónico</label><br/>
+                                        <input type="text" id="email" name="email"/>
+                                    </div><div class="form-separator">
+                                        <label for="password">Contraseña</label><br/>
+                                        <fieldset>
+                                        <input type="password" id="password" name="password"/>
+                                        <span class="icon-eye"></span>
+                                    </fieldset>
+                                    </div>
+                                    <a href="register-relatives-students.html">Registrate</a>
+                                    <div class="form-submit__btn">
+                                        <button class="btn btn-orange" type="submit">Ingresar</button>
+                                        <!-- <a  onclick="OpenSection($(this));" data-open="rescue">¿Olvidaste tu contraseña?</a> -->
+                                        
+                                    </div>
+                                    <span class="text-warning log-in" id="login"></span>
+                                    </form>
+                                    <!-- <a class="url_create wow fadeInRight" onclick="OpenSection($(this));" data-open="login">Regresar</a> -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="m-crea-modal">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <img src="./public/img/icons/icon-checked-modal.svg" alt="Oben icon">
+                    <h2>¡Registro exitoso!</h2>
+                    <h1>Recibirá un correo informativo de su status de registro.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="f-container">
+            <div class="footer-content top">
+                <div class="footer-slot">
+                    <img src="./public/img/icons/icon-footer.svg" alt="Oben icon">
+                </div>
+                <div class="footer-slot">
+                    <h1>¿Necesitas ayuda?</h1>
+                    <small>Escríbenos a: <a href="mailto:soporte@bgroup.edu.pe">soporte@bgroup.edu.pe</a></small>
+                </div>
+            </div>
+            <div class="footer-content bottom">
+                <small>© 2023 B. Group. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/wow.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script type="text/javascript">
+        new WOW().init();
+    </script> 
+</body>
+</html>
