@@ -79,12 +79,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../admin/estado-matricula.html">
-                                <i class="icon docs"></i> 
-                                <span class="item">Estado de matrículas</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="../admin/reporte-matricula.html">
                                 <i class="icon docs"></i> 
                                 <span class="item">Reporte de matrículas</span>
@@ -167,7 +161,22 @@
 
                     <div class="r-inputs d-flex">
                         <div class="item-input d-flexc">
-                            <label for="">Apoderado</label>
+                            <label for="">Tipo de Estudiante:</label>
+                            <div class="f-desplegable s-profile">                                
+                                <div class="box-filtro">
+                                    <div class="intranet-select c-witdh s-perfil"><!-- Custom select for intranet-->
+                                        <h1>Seleccionar</h1><!-- Placeholder-->
+                                        <div class="i-options"> <!-- Options -->
+                                            <span value="opcion 1">Antiguo</span>
+                                            <span value="opcion 2">Nuevo</span>
+                                        </div>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+
+                        <div class="item-input d-flexc">
+                            <label for="">Apoderado:</label>
                             <div class="f-desplegable s-profile">                                
                                 <div class="box-filtro">
                                     <div class="intranet-select c-witdh s-perfil"><!-- Custom select for intranet-->
@@ -224,7 +233,7 @@
                 <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
                 <h2>¡Estudiante registrado correctamente!</h2>
                 <!-- <h3>Se ha actualizado correctamente la información</h3> -->
-                <a href="">
+                <a href="../admin/estudiantes.html">
                     <button class="btn-modal btn-modal-close">Continuar</button>
                 </a>
             </div>

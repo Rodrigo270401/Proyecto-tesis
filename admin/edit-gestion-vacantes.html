@@ -7,7 +7,7 @@
     <meta property="og:image" itemprop="image" content="../public/img/icons/opengraph.jpg">
     <meta property="og:image:alt" content="../public/img/icons/opengraph.jpg">
     <link rel="shortcut icon" href="../public/img/icons/favicon.png">
-    <title>B.Group - Editar Apoderado</title>
+    <title>B.Group - Editar Estudiante</title>
     <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
     <link rel="stylesheet" href="../public/css/animate.css">
     <link rel="stylesheet" href="../public/css/main.css">
@@ -55,7 +55,7 @@
                             </a>
                         </li>                    
                         <li>
-                            <a href="../admin/apoderados.html" class="active">
+                            <a href="../admin/apoderados.html">
                                 <i class="icon clients"></i> 
                                 <span class="item">Apoderados</span>
                             </a>
@@ -73,7 +73,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../admin/gestion-vacantes.html">
+                            <a href="../admin/gestion-vacantes.html" class="active">
                                 <i class="icon docs"></i> 
                                 <span class="item">Gestión de vacantes</span>
                             </a>
@@ -92,151 +92,152 @@
             
             <div class="m-container home">                
         
-                <div class="historico-solicitudes edit-estudiantes">
-                    <h1>Editar Apoderado</h1>
-                    <img src="../public/img/icons/icon-edit.png" alt="">
-                </div>
-
-
-                <!-- Select parentesco -->
-                <div class="r-inputs d-flex">
-                    <div class="item-input d-flexc">
-                        <label for="">Parentesco con alumno:</label>
-                        <div class="f-desplegable s-profile">                                
-                            <div class="box-filtro">
-                                <div class="intranet-select c-witdh s-perfil"><!-- Custom select for intranet-->
-                                    <h1>Padres - Hijo</h1><!-- Placeholder-->
-                                    
-                                </div>
-                            </div>                        
-                        </div>
+                <div class="historico-solicitudes ">
+                    <div class="d-flex gt-matricula">
+                        <a href="../admin/gestion-vacantes.html"><img src="../public/img/icons/icon-regresar.png" alt=""></a>
+                        <h1>Editar vacantes</h1>
                     </div>
                 </div>
 
-                <!-- datos form del padre -->
-                <div class="form-perfil estudiantes">
-                    <h3 class="title-data">Datos del Padre</h3>
-                    <div class="r-inputs d-flex col-3">
-                        <div class="item-input d-flexc">
-                            <label for="">Nombres:</label>
-                            <input class="black" type="text" value="Jorge Ricardo">
-                        </div>
+                <div class="d-flex">
 
-                        <div class="item-input d-flexc">
-                            <label for="">Apellidos:</label>
-                            <input class="black" type="text"  value="Lopez Aliaga">
-                        </div>
-
-                        <div class="item-input d-flexc">
-                            <label for="">Correo:</label>
-                            <input class="black" type="text"  value="jlopez@gmail.com" >
-                        </div>
-                    </div>
-
-                    <div class="r-inputs d-flex">
-                        <div class="item-input d-flexc">
-                            <label for="">Teléfono:</label>
-                            <input class="black" type="text"  value="955864154" >
-                        </div>
-
-                        <div class="item-input d-flexc">
-                            <label for="">DNI</label>
-                            <input class="black" type="text" value="79852652" >
-                        </div>
-                    </div>
-
-                    <div class="r-inputs d-flex">
-                        <div class="item-input d-flexc large">
-                            <label for="">Dirección Domicilio:</label>
-                            <input class="black" type="text" value="Jr guadaluoe 145" >
-                        </div>                        
-                    </div>
-
-                    <div class="r-inputs d-flex">
-                        <div class="item-input d-flexc large">
-                            <label for="">Dirección Domicilio:</label>
-                            <input class="black" type="text" value="Jr Castilla 2564" >
-                        </div>
-                    </div>
-                </div>
-
-                <!-- datos form de la madre -->
-                <div class="form-perfil estudiantes">
-                    <h3 class="title-data">Datos de la Madre</h3>
-                    <div class="r-inputs d-flex col-3">
-                        <div class="item-input d-flexc">
-                            <label for="">Nombres:</label>
-                            <input class="black" type="text" value="Monica Antonela">
-                        </div>
-
-                        <div class="item-input d-flexc">
-                            <label for="">Apellidos:</label>
-                            <input class="black" type="text"  value="Haumani Chuzan">
-                        </div>
-
-                        <div class="item-input d-flexc">
-                            <label for="">Correo:</label>
-                            <input class="black" type="text"  value="mchuzan@gmail.com">
+                    <div class="tb-vacantes">
+                        <h2>Primaria</h2>
+                        <div class="table-solicitudes">
+                            <table class="tb-sol vacantes">
+                                <thead>
+                                    <tr>
+                                        <th class="first vacante">Grado</th>
+                                        <th class="last vacante">Vacantes</th>
+                                        
+                                    </tr>
+                                </thead>
+                
+                                <tbody class="tbody vacante">
+                                    <tr>
+                                        <td>1ro</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2do</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3ro</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4to</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5to</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6to</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <div class="r-inputs d-flex">
-                        <div class="item-input d-flexc">
-                            <label for="">Teléfono:</label>
-                            <input class="black" type="text"  value="955864154">
-                        </div>
-
-                        <div class="item-input d-flexc">
-                            <label for="">DNI</label>
-                            <input class="black" type="text" value="79852652">
+                    <div class="tb-vacantes">
+                        <h2>Secundaria</h2>
+                        <div class="table-solicitudes">
+                            <table class="tb-sol vacantes">
+                                <thead>
+                                    <tr>
+                                        <th class="first vacante">Grado</th>
+                                        <th class="last vacante">Vacantes</th>
+                                        
+                                    </tr>
+                                </thead>
+                
+                                <tbody class="tbody vacante">
+                                    <tr>
+                                        <td>1ro</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2do</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3ro</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4to</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5to</td>
+                                        <td>
+                                            <input class="inp-vac" type="number" value="150"></input>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <div class="r-inputs d-flex">
-                        <div class="item-input d-flexc large">
-                            <label for="">Dirección Domicilio:</label>
-                            <input class="black" type="text" value="Jr guadaluoe 145">
-                        </div>                        
-                    </div>
-
-                    <div class="r-inputs d-flex">
-                        <div class="item-input d-flexc large">
-                            <label for="">Dirección Domicilio:</label>
-                            <input class="black" type="text" value="Jr Castilla 2564">
-                        </div>
-                    </div>
                 </div>
 
                 <div class="btn-edit-profile d-flex">
 
                     <div class="btn-filtrar btn-left ">
-                        <a href="../admin/apoderados.html">
+                        <a href="../admin/gestion-vacantes.html">
                             <button>Cancelar</button>
                         </a>
                     </div>
 
                     <div class="btn-filtrar ">
                         <a onclick="ModalgenerarMatricula($(this))">
-                            <button>Guardar</button>
+                            <button>Actualizar</button>
                         </a>
                     </div>
 
                 </div>
 
+                
+                
             </div>
         </div>
     </section>
+
 
 <!-- inicio modal -->
 <div id="modal-generarmatricula" class="m-crea-modal">
     <div class="m-crea-modal__background">
         <div class="m-crea-modal__container m-crea__cot ">
-            <!-- <a class="modal-btn__close"></a> -->
+            <a class="modal-btn__close"></a>
             <div class="m-crea-modal__content">
                 <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
-                <h2>¡Apoderado actualizado correctamente!</h2>
+                <h2>¡Vacantes actualizadas correctamente!</h2>
                 <!-- <h3>Se ha actualizado correctamente la información</h3> -->
-                <a href="../admin/apoderados.html">
+                <a href="">
                     <button class="btn-modal btn-modal-close">Continuar</button>
                 </a>
             </div>
@@ -244,6 +245,7 @@
     </div>
 </div>
 <!-- fin modal -->
+
 
 <footer>
     <div class="f-container">
@@ -261,14 +263,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-    function eliminarFila(enlace) {
-      var fila = enlace.parentNode.parentNode;
-      var tabla = fila.parentNode;
-      tabla.removeChild(fila);
-    }
-  </script>
 
     <script src="../public/js/jquery.min.js"></script>
     <script src="../public/js/wow.min.js"></script>

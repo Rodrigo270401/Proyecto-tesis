@@ -433,7 +433,7 @@ button.btn-tb-orange.delete:hover{
     text-align: left;
 }
 
-.info-estudiante h1 {
+.info-estudiante h2 {
     text-decoration: underline;
     font-size: 20px;
     margin-bottom: 28px;
@@ -544,6 +544,7 @@ th.last.vacante {
 
 .tb-vacantes{
     margin-bottom: 30px;
+    margin-right: 50px;
 }
 
 h3.title-data {
@@ -556,4 +557,18 @@ h3.title-data {
 }
 .item-input.d-flexc.large input {
     width: 640px!important;
+}
+
+.item-input.d-flexc.c-entrevista {
+    margin-bottom: 20px;
+}
+
+input.inp-vac {
+    text-align: center;
+    color: #979797;
+    font-size: 15px;
+}
+
+input.inp-vac.no-border{
+    border: none;
 }

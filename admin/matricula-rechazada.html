@@ -79,12 +79,6 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../admin/estado-matricula.html">
-                                <i class="icon docs"></i> 
-                                <span class="item">Estado de matrículas</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="../admin/reporte-matricula.html">
                                 <i class="icon docs"></i> 
                                 <span class="item">Reporte de matrículas</span>
@@ -103,18 +97,15 @@
                         <a href="../admin/gestion-matricula.html"><img src="../public/img/icons/icon-regresar.png" alt=""></a>
                         <h1>Solicitud 10001 - Rodolfo Julian Gutierrez Gonzales</h1>
                     </div>
-
-                   
-                    
                 </div>
 
                 <div class="box-estado">
                     <h1>Estado:</h1>
-                    <div class="box-item correccion"><h2>Validacion de Pago</h2></div>
+                    <div class="box-item rechazado"><h2>Rechazada</h2></div>
                 </div>
 
                 <div class="info-estudiante">
-                    <h1>Información del estudiante</h1>
+                    <h2>Información del estudiante</h2>
                     <div class="items-datos">
                         <li>Nombre: Rodolfo Julian Gutierrez Gonzales</li>
                         <li>Apoderado: Juan Alonso Chavez Perez</li>
@@ -125,7 +116,7 @@
                 </div>
 
                 <div class="info-estudiante documentos">
-                    <h1>Documentos adjuntados</h1>
+                    <h2>Documentos adjuntados</h2>
 
                     <div class="section-docs">
 
@@ -231,41 +222,26 @@
                     
                     </div>
 
-                    <div class="flex-documentos-row">
-                        <div class="item-doc">
-                            <h2>Comprobante de pago</h2>
-                            <div class="info-doc">
-                                <div class="name-doc">
-                                    <img src="../public/img/icons/icon-file.png" alt="">
-                                    <h3>comprobante.pdf</h2>
-                                </div>
+                    <!-- <div class="info-estudiante acciones">
+                        <h2>Acciones</h2>
 
-                                <div class="btn-ver-doc">
-                                    <a target="_blank" class="" href="../public/files/sample.pdf">
-                                        <button class="btn-tb-orange btn-download">Visualizar</button>
-                                    </a>
-                                </div>
-
-                                <div class="btn-download-doc">
-                                    <a target="_blank" download="" class="" href="../public/files/sample.pdf">
-                                        <button class="btn-tb-orange btn-download">Descargar</button>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    
-                    <div class="info-estudiante acciones">
-                        <h1>Acciones</h1>
                         <div class="btn-accions">
-                            <div class="btn-filtrar validate btn-f-estado validate-pay">
-                                <a onclick="BtnAprobarMatricula($(this))"><button>Validar pago de matrícula</button></a> 
+                             <div class="btn-filtrar validate btn-f-estado">
+                                <a onclick="BtnRechazarMatricula($(this))" ><button>Rechazar</button></a> 
                              </div>
+    
+                             <div class="btn-filtrar validate btn-f-estado">
+                                <a onclick="BtnCorregirMatricula($(this))"><button>Corregir</button></a> 
+                             </div>
+
+                             <div class="btn-filtrar validate btn-f-estado">
+                                <a href="../admin/entrevistas.html"><button>Agendar entrevistas</button></a> 
+                             </div>
+
                         </div>
-                    </div>
+
+                    </div> -->
+
                 </div>
         </div>
     </section>
@@ -277,8 +253,40 @@
                 <a class="modal-btn__close"></a>
                 <div class="m-crea-modal__content">
                     <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
-                    <h2>¡Pago de matrícula <br>validado correctamente!</h2>
-                    <a href="/admin/gestion-matricula.html"><button class="btn-modal btn-modal-close">Continuar</button></a>
+                    <h2>¡Solicitud de matricula  <br>aprobada correctamente!</h2>
+                    <!-- <a href=""><button class="btn-modal btn-modal-close">Continuar</button></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-rechazar-matricula" class="m-crea-modal">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container m-crea__cot">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
+                    <h2>¡Solicitud de matricula  <br>rechazada correctamente!</h2>
+                    <!-- <a href=""><button class="btn-modal btn-modal-close">Continuar</button></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-corregir-matricula" class="m-crea-modal ">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container m-crea__cot correccion-mt">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <!-- <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon"> -->
+                    <h2>Enviar comentarios de corrección</h2>
+                    <textarea class="obs-txt"  placeholder="Ingrese comentarios de corrección.."></textarea>
+
+                    <div class="d-flex">
+                        <a href=""><button class="btn-modal btn-modal-close btn-comentario">Cancelar</button></a>
+                        <a ><button class="btn-modal btn-modal-close btn-comentario">Enviar</button></a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
