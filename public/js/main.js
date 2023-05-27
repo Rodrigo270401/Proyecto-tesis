@@ -54,11 +54,11 @@ function OpenSection(e) {
 
 
         case 'profile':
-            window.location.href = "/bgroup/edit-profile.html";
+            window.location.href = "/edit-profile.html";
             break;
 
         case 'logout':
-            window.location.href = "/bgroup/index.html";
+            window.location.href = "/index.html";
             break;
         // case 'new-historical':
         //     window.location.href = "/nueva-solicitud.html" ;
