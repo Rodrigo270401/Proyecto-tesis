@@ -545,3 +545,15 @@ th.last.vacante {
 .tb-vacantes{
     margin-bottom: 30px;
 }
+
+h3.title-data {
+    text-align: left;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+.r-inputs.d-flex.col-3 {
+    width: 978px;
+}
+.item-input.d-flexc.large input {
+    width: 640px!important;
+}
