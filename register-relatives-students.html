@@ -51,9 +51,42 @@
                 <div class="titulo-registro">
                     <h1>Registrar Usuario</h1>
                 </div>
+
+                <!-- TIPO DE APODERADO -->
+                <div class="container" id="form-tipo-apoderado">
+                    <form class="registro-apoderado" action="">
+                        <h2>Tipo de Apoderado</h2>
+                        <div class="formulario-apoderado">
+                            <div class="input-box">
+                                <div class="box">
+                                    <label for="parentesco">Parentesco con el alumno</label>
+                                    <select class="input-padron" id="parentesco">
+                                        <option value="0">Eliga una opción</option>
+                                        <option value="1">Padres - Hijos</option>
+                                        <option value="2">Otros</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-box" id="responsable">
+                                <div class="box">
+                                    <label for="nivelacademico">Seleccione apoderado responsable</label>
+                                    <select class="input-padron" id="tipo-parentesco">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br><br><br><br><br><br><br><br><br>
+                    <div class="boton-container">
+                        <button id="boton" class="boton" onclick="mostrar();">Continuar</button>
+                    </div>
+                </div>
+                <!-- FIN TIPO DE APODERADO -->
+
+                <!-- REGISTRO DEL PADRE -->
                 <div class="container" id="form-apoderado">
                     <form class="registro-apoderado" action="">
-                        <h2>Datos del Apoderado</h2>
+                        <h2>Datos del Apoderado: <span id="apoderado1"></span></h2>
                         <div class="formulario-apoderado">
                             <div class="input-box">
                                 <div class="box">
@@ -86,9 +119,16 @@
                                         required>
                                 </div>
                                 <div class="box">
-                                    <label for="dirección">Correo Electrónico</label>
+                                    <label for="dirección">Dirección de Domicilio</label>
                                     <input type="text" placeholder="Av. Example 213" id="dirección" class="input-padron"
                                         required>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="box-a">
+                                    <label for="dirección-trabajo">Dirección de Trabajo</label>
+                                    <input type="text" placeholder="Av. Example 213" id="dirección"
+                                        class="input-padron-a" required>
                                 </div>
                             </div>
                             <div class="input-box">
@@ -105,12 +145,85 @@
                             </div>
                         </div>
                     </form>
+                    <div class="boton-container-r">
+                        <button id="boton1" class="boton" onclick="ocultar1();">Regresar</button>
+                        <button id="boton2" class="boton" onclick="mostrar1();">Continuar</button>
+                    </div>
+                </div>
+                <!-- FIN DE REGISTRO DEL PADRE -->
 
-                    <div class="boton-container">
-                        <button id="boton" class="boton" onclick="mostrar();">Continuar</button>
+
+                <!-- REGISTRO DE LA MADRE -->
+                <div class="container" id="form-apoderado-madre">
+                    <form class="registro-apoderado" action="">
+                        <h2>Datos del Apoderado: <span id="apoderado2"></span></h2>
+                        <div class="formulario-apoderado">
+                            <div class="input-box">
+                                <div class="box">
+                                    <label for="nombre-apoderado">Nombres</label>
+                                    <input type="text" placeholder="Ingrese su nombre" id="nombre-apoderado"
+                                        class="input-padron" required>
+                                </div>
+                                <div class="box">
+                                    <label for="apellido-apoderado">Apellidos</label>
+                                    <input type="text" placeholder="Ingrese sus apellidos" id="apellido-apoderado"
+                                        class="input-padron" required>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="box">
+                                    <label for="correoelectronico">Correo Electrónico</label>
+                                    <input type="email" placeholder="example@example.com" id="correoelectronico"
+                                        class="input-padron" required>
+                                </div>
+                                <div class="box">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="number" placeholder="(+51) XXX XXX XXX" id="telefono"
+                                        class="input-padron" required>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="box">
+                                    <label for="dni-apoderado">DNI</label>
+                                    <input type="number" placeholder="XXXXXXXX" id="dni-apoderado" class="input-padron"
+                                        required>
+                                </div>
+                                <div class="box">
+                                    <label for="dirección">Dirección de Domicilio</label>
+                                    <input type="text" placeholder="Av. Example 213" id="dirección" class="input-padron"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="box-a">
+                                    <label for="dirección-trabajo">Dirección de Trabajo</label>
+                                    <input type="text" placeholder="Av. Example 213" id="dirección"
+                                        class="input-padron-a" required>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="box">
+                                    <label for="contraseña">Contraseña</label>
+                                    <input type="password" placeholder="***********" id="contraseña"
+                                        class="input-padron" required>
+                                </div>
+                                <div class="box">
+                                    <label for="confirmarcontra">Confirmar Contraseña</label>
+                                    <input type="password" placeholder="***********" id="confirmarcontra"
+                                        class="input-padron" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="boton-container-r">
+                        <button id="boton3" class="boton" onclick="ocultar2();">Regresar</button>
+                        <button id="boton4" class="boton" onclick="mostrar2();">Continuar</button>
                     </div>
                 </div>
 
+                <!-- FIN DE REGISTRO DE LA MADRE -->
+
+                <!-- REGISTRO DE ALUMNOS -->
                 <div class="container" id="form-alumno">
                     <form class="registro-alumno" action="">
                         <h2>Datos del Alumno</h2>
@@ -121,12 +234,6 @@
                         <div class="input-box">
                             <fieldset>
                                 <label for="alumno">Alumnos 01</label>
-                                <label for="alumno">Parentesco con el alumno</label>
-                                <select class="input-padron">
-                                    <option selected>Elige una opción</option>
-                                    <option>Padre</option>
-                                    <option>Tutor</option>
-                                </select>
                             </fieldset>
                         </div>
                         <div class="formulario-apoderado">
@@ -168,11 +275,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </form>
 
                     <div class="boton-container-r">
-                        <button id="boton" class="boton" onclick="ocultar();">Regresar</button>
+                        <button id="boton5" class="boton" onclick="ocultar();">Regresar</button>
                         <button type="submit" value="Registrar" class="boton" id="openModal">Registrar</button>
                     </div>
                 </div>
