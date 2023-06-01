@@ -135,6 +135,10 @@ const ModalgenerarMatricula = () => {
     $('#modal-generarmatricula').fadeIn(500);
 
 }
+const ModalOpcionesPago = () => {
+    $('#modal-opcionespago').fadeIn(500);
+
+}
 
 
 

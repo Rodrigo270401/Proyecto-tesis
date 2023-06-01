@@ -122,7 +122,9 @@
 
                     <div class="info-estado col">
                         <h1>El paso final para completar el proceso de mátricula sería el pago de la matrícula el cual es un monto de:<b> S/ 250.00 </b></h1>
-                        <!-- <a class="mrg-download" onclick=""><button class="btn-tb-orange btn-download">Ver opciones de pago</button></a> -->
+                        <a class="mrg-download" onclick="ModalOpcionesPago($(this))">
+                            <button class="btn-tb-orange btn-download">Ver opciones de pago</button>
+                        </a>
                     </div>
 
                     <div class="info-estado col">
@@ -159,6 +161,26 @@
                     <h3>Recibiras un correo informativo con la respuesta de la validación del comprobante de pago</h3>
                     <a href="estado-matricula-validacion.html">
                         <button class="btn-modal btn-modal-close">Continuar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-opcionespago" class="m-crea-modal">
+        <div class="m-crea-modal__background">
+            <div class="m-crea-modal__container m-crea__cot pagos">
+                <a class="modal-btn__close"></a>
+                <div class="m-crea-modal__content">
+                    <!-- <img src="./public/img/icons/icon-checked-modal.svg" alt="Oben icon"> -->
+                    <h2>Opciones de Pago</h2>
+                    <h3>El pago de la matrícula se podrá realizar desde los siguientes métodos :</h3>
+                        <li>Agentes BCP</li>
+                        <li>Banca móvil BCP</li>
+                        <li>Banca por internet BCP</li>
+                    <h3>El pago figurará mediante el DNI registrado del estudiante</h3>
+                    <a href="estado-matricula-aprobada.html">
+                        <button class="btn-modal btn-modal-close btn-modal-pago">Regresar</button>
                     </a>
                 </div>
             </div>

@@ -7,7 +7,7 @@
     <meta property="og:image" itemprop="image" content="../public/img/icons/opengraph.jpg">
     <meta property="og:image:alt" content="../public/img/icons/opengraph.jpg">
     <link rel="shortcut icon" href="../public/img/icons/favicon.png">
-    <title>B.Group - Inicio</title>
+    <title>B.Group - Reporte de matrículas</title>
     <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
     <link rel="stylesheet" href="../public/css/animate.css">
     <link rel="stylesheet" href="../public/css/main.css">
@@ -49,7 +49,7 @@
                 <div class="sidebar">
                     <ul>
                         <li>
-                            <a href="../admin/home.html" class="active">
+                            <a href="../admin/home.html">
                                 <i class="icon home"></i>
                                 <span class="item">Inicio</span>
                             </a>
@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../admin/reporte-matricula.html">
+                            <a href="../admin/reporte-matricula.html" class="active">
                                 <i class="icon docs"></i> 
                                 <span class="item">Reporte de matrículas</span>
                             </a>
@@ -92,44 +92,84 @@
             
             <div class="m-container home">                
         
-                <div class="ulitmas-solicitudes">
-                    <h1>Nuestros módulos</h1>
-                </div>
-        
-                <div class="modules">
-                    <div class="row-module">
-                        <div class="module">
-                            <img src="../public/img/icons/icon-miperfil.png" alt="">                            
-                            <a href="../admin/apoderados.html"><button class="btn-tb-orange btn-home">Apoderados</button></a>
-                        </div>
-                        <div class="module">
-                            <img src="../public/img/icons/icon-estudiantes.png" alt="">
-                            <a href="../admin/estudiantes.html"><button class="btn-tb-orange btn-home">Estudiantes</button></a>
-                        </div>
-                        <div class="module">
-                            <img src="../public/img/icons/icon-matricula.png" alt="">
-                            <a href="../admin/gestion-matricula.html"><button class="btn-tb-orange btn-home">Gestión de matrículas</button></a>
-                        </div>
-                    </div>    
+                <div class="historico-solicitudes ">
+                    <div><h1>Reporte de matrículas</h1></div>
                     
-                    <div class="row-module">                        
-                        <div class="module">
-                            <img src="../public/img/icons/icon-st-matricula.png" alt="">
-                            <a href="../admin/gestion-vacantes.html"><button class="btn-tb-orange btn-home">Gestión de vacantes</button></a>
-                        </div>
-
-                        <div class="module">
-                            <img src="../public/img/icons/icon-matricula.png" alt="">
-                            <a href="../admin/reporte-matricula.html"><button class="btn-tb-orange btn-home">Reportes de matrículas</button></a>
-                        </div>
-                        
-                    </div> 
-
                 </div>
+
+                <div class="resultados">
+                    <div class="row-results d-flex">
+                        
+
+                        <div class="filtros f-estado"> 
+
+                            <div class="f-desplegable n-acad reporte">
+                                <div class="title"><h2>Filtrar por nivel académico</h2></div>
+                                <div class="box-filtro">
+                                    <div class="intranet-select c-witdh s-estado"><!-- Custom select for intranet-->
+                                        <h1>Elige una opción</h1><!-- Placeholder-->
+                                                <div class="i-options"> <!-- Options -->
+                                                    <span value="opcion 1">Primaria</span>
+                                                    <span value="opcion 2">Secundaria</span>
+                                                </div>
+                                    </div>
+                                </div>                        
+                            </div>
+
+                            <div class="f-desplegable reporte">
+                                <div class="title"><h2>Filtrar por estado</h2></div>
+                                <div class="box-filtro">
+                                    <div class="intranet-select c-witdh s-estado"><!-- Custom select for intranet-->
+                                        <h1>Elige una opción</h1><!-- Placeholder-->
+                                                <div class="i-options"> <!-- Options -->
+                                                    <span value="opcion 1">En evaluación</span>
+                                                    <span value="opcion 2">Aprobado</span>
+                                                    <span value="opcion 3">En corrección</span>
+                                                    <span value="opcion 4">En entrevistas</span>
+                                                    <span value="opcion 5">Rechazado</span>
+                                                    <span value="opcion 6">Validación de pago</span>
+                                                    <span value="opcion 7">Pagado</span>                                                    
+                                                </div>
+                                    </div>
+                                </div>                        
+                            </div>
+
+                            <div class="f-desplegable calendar">
+                                <div class="title"><h2>Filtro por fecha</h2></div>
+                                <div class="row-calendar">
+                                    <div class="leyenda"><h2>Desde</h2></div>
+                                    <div class="item-input d-flexc reporte">
+                                        <input class="black" type="date" placeholder="dd/mm/aaaa">
+                                    </div>
+        
+                                    <div class="leyenda"><h2>hasta</h2></div>
+                                    <div class="item-input d-flexc reporte">
+                                        <input class="black" type="date" placeholder="dd/mm/aaaa">
+                                    </div>
+
+        
+                                </div>
+        
+                                
+                                                     
+                            </div>
+        
+                            <div class="btn-filtrar validate btn-f-estado">
+                               <a href="../admin/reporte-matricula2.html"><button>Filtrar</button></a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
 
             </div>
         </div>
     </section>
+
+
+    
+
 <footer>
     <div class="f-container">
         <div class="footer-content top">
@@ -146,6 +186,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+    function eliminarFila(enlace) {
+      var fila = enlace.parentNode.parentNode;
+      var tabla = fila.parentNode;
+      tabla.removeChild(fila);
+    }
+  </script>
+
     <script src="../public/js/jquery.min.js"></script>
     <script src="../public/js/wow.min.js"></script>
     <script src="../admin/js/main.js"></script>

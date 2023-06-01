@@ -7,7 +7,7 @@
     <meta property="og:image" itemprop="image" content="../public/img/icons/opengraph.jpg">
     <meta property="og:image:alt" content="../public/img/icons/opengraph.jpg">
     <link rel="shortcut icon" href="../public/img/icons/favicon.png">
-    <title>B.Group - Gestión de matrícula</title>
+    <title>B.Group - Reporte de matrículas</title>
     <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
     <link rel="stylesheet" href="../public/css/animate.css">
     <link rel="stylesheet" href="../public/css/main.css">
@@ -67,7 +67,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../admin/gestion-matricula.html" class="active">
+                            <a href="../admin/gestion-matricula.html">
                                 <i class="icon fichas"></i>                          
                                 <span class="item">Gestión de matrícula</span>
                             </a>
@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../admin/reporte-matricula.html">
+                            <a href="../admin/reporte-matricula.html" class="active">
                                 <i class="icon docs"></i> 
                                 <span class="item">Reporte de matrículas</span>
                             </a>
@@ -93,33 +93,17 @@
             <div class="m-container home">                
         
                 <div class="historico-solicitudes ">
-                    <div><h1>Gestión de matrículas</h1></div>
-
-                    <div class="search">
-                        <div class="text">
-                            <img src="../public/img/icons/icon-search.svg" alt="">
-                            <input type="text" placeholder="Buscar estudiante">
-                        </div>                        
-                        <div class="btn-search">
-                            <button>Buscar</button>
-                        </div>
-                    </div>
+                    <div><h1>Reporte de matrículas</h1></div>
                     
                 </div>
 
                 <div class="resultados">
-                    <h1>Resultados (35):</h1>
                     <div class="row-results d-flex">
-                        <a href="../admin/new-estudiante.html" class="a-btn-add">
-                            <!-- <div class="btn-add">
-                                <img src="../public/img/icons/icon-add-register.png" alt="">
-                                <h2>Añadir</h2> 
-                            </div>  -->
-                        </a>
+                        
 
                         <div class="filtros f-estado"> 
 
-                            <div class="f-desplegable n-acad">
+                            <div class="f-desplegable n-acad reporte">
                                 <div class="title"><h2>Filtrar por nivel académico</h2></div>
                                 <div class="box-filtro">
                                     <div class="intranet-select c-witdh s-estado"><!-- Custom select for intranet-->
@@ -132,7 +116,7 @@
                                 </div>                        
                             </div>
 
-                            <div class="f-desplegable">
+                            <div class="f-desplegable reporte">
                                 <div class="title"><h2>Filtrar por estado</h2></div>
                                 <div class="box-filtro">
                                     <div class="intranet-select c-witdh s-estado"><!-- Custom select for intranet-->
@@ -149,6 +133,26 @@
                                     </div>
                                 </div>                        
                             </div>
+
+                            <div class="f-desplegable calendar">
+                                <div class="title"><h2>Filtro por fecha</h2></div>
+                                <div class="row-calendar">
+                                    <div class="leyenda"><h2>Desde</h2></div>
+                                    <div class="item-input d-flexc reporte">
+                                        <input class="black" type="date" placeholder="dd/mm/aaaa">
+                                    </div>
+        
+                                    <div class="leyenda"><h2>hasta</h2></div>
+                                    <div class="item-input d-flexc reporte">
+                                        <input class="black" type="date" placeholder="dd/mm/aaaa">
+                                    </div>
+
+        
+                                </div>
+        
+                                
+                                                     
+                            </div>
         
                             <div class="btn-filtrar validate btn-f-estado">
                                <a href=""><button>Filtrar</button></a> 
@@ -157,8 +161,62 @@
                     </div>
                 </div>
 
+                <div class="img-graficos">
+                    <img src="../public/img/fondo/bg-reporte.jpg" alt="">
+                </div>
+
+                <div class="data-leyendas">
+                    <div class="row-data-leyendas">
+
+                        <div class="it-leyenda">
+                            <div class="box-color amarillo"></div>
+                            <h2>Evaluacion</h2>
+                        </div>
+    
+                        <div class="it-leyenda">
+                            <div class="box-color celeste"></div>
+                            <h2>Entrevistas</h2>
+                        </div>
+    
+                        <div class="it-leyenda">
+                            <div class="box-color rojo"></div>
+                            <h2>Rechazada</h2>
+                        </div>
+    
+                        <div class="it-leyenda">
+                            <div class="box-color naranja"></div>
+                            <h2>corrección</h2>
+                        </div>
+    
+                        <div class="it-leyenda">
+                            <div class="box-color verde"></div>
+                            <h2>Aprobada</h2>
+                        </div>
+                    </div>
+    
+                    <div class="row-data-leyendas short">
+                        <div class="it-leyenda">
+                            <div class="box-color mostaza"></div>
+                            <h2>Validación de Pago</h2>
+                        </div>
+    
+                        <div class="it-leyenda">
+                            <div class="box-color azul"></div>
+                            <h2>Pagado</h2>
+                        </div>
+    
+                    </div>
+
+                </div>
+                
+
         
                 <div class="table-solicitudes">
+
+                    <div class="btn-filtrar validate btn-f-estado export">
+                        <a download href="../public/files/Reporte-matricula.xlsx"><button>Exportar</button></a> 
+                     </div>
+                    
                     <table class="tb-sol">
                         <thead>
                             <tr>
@@ -169,8 +227,7 @@
                                 <th style="width: 95px;">Nivel <br> Académico</th>
                                 <th style="width: 90px;">Grado</th>
                                 <th style="width: 125px;">Fecha<br>Registrada</th>                                
-                                <th style="width: 90px;">Estado</th>
-                                <th class="last">Opciones</th>
+                                <th class="last reporte">Estado</th>
                             </tr>
                         </thead>
         
@@ -184,12 +241,6 @@
                                 <td>5to</td>
                                 <td>05-10-2010</td>
                                 <td>Validación de Pago</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-validacion-pago.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
                             </tr>
 
                             <tr>
@@ -200,13 +251,7 @@
                                 <td>Secundaria</td>
                                 <td>5to</td>
                                 <td>05-10-2010</td>
-                                <td>En evaluación</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-seleccionada.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
+                                <td>Validación de Pago</td>
                             </tr>
 
                             <tr>
@@ -217,13 +262,7 @@
                                 <td>Secundaria</td>
                                 <td>5to</td>
                                 <td>05-10-2010</td>
-                                <td>En entrevistas</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-entrevista2.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
+                                <td>Validación de Pago</td>
                             </tr>
 
                             <tr>
@@ -234,13 +273,7 @@
                                 <td>Secundaria</td>
                                 <td>5to</td>
                                 <td>05-10-2010</td>
-                                <td>En evaluación</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-seleccionada.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
+                                <td>Validación de Pago</td>
                             </tr>
 
                             <tr>
@@ -251,13 +284,7 @@
                                 <td>Secundaria</td>
                                 <td>5to</td>
                                 <td>05-10-2010</td>
-                                <td>En evaluación</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-seleccionada.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
+                                <td>Validación de Pago</td>
                             </tr>
 
                             <tr>
@@ -268,13 +295,7 @@
                                 <td>Secundaria</td>
                                 <td>5to</td>
                                 <td>05-10-2010</td>
-                                <td>En evaluación</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-seleccionada.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
+                                <td>Validación de Pago</td>
                             </tr>
 
                             <tr>
@@ -285,13 +306,7 @@
                                 <td>Secundaria</td>
                                 <td>5to</td>
                                 <td>05-10-2010</td>
-                                <td>En evaluación</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-seleccionada.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
+                                <td>Validación de Pago</td>
                             </tr>
 
                             <tr>
@@ -302,14 +317,10 @@
                                 <td>Secundaria</td>
                                 <td>5to</td>
                                 <td>05-10-2010</td>
-                                <td>En evaluación</td>
-                                <td >                                    
-                                    <div class="opciones-items">
-                                        <a href="../admin/matricula-seleccionada.html"><img class="edit expand-efect" src="../public/img/icons/icon-ver-item.svg" alt=""></a>
-                                        <a onclick="ModaldeleteRegistro($(this))"><img class="delete expand-efect" src="../public/img/icons/icon-delete-item.svg" alt=""></a>
-                                    </div>                                    
-                                </td>
+                                <td>Validación de Pago</td>
                             </tr>
+
+                            
 
                         </tbody>
                     </table>
@@ -330,20 +341,6 @@
             </div>
         </div>
     </section>
-
-
-    <div id="modal-deleteRegistro" class="m-crea-modal">
-        <div class="m-crea-modal__background">
-            <div class="m-crea-modal__container m-crea__cot">
-                <a class="modal-btn__close"></a>
-                <div class="m-crea-modal__content">
-                    <img src="../public/img/icons/icon-checked-modal.svg" alt="Oben icon">
-                    <h2>¡Solicitud eliminada <br> correctamente!</h2>
-                    <a href=""><button class="btn-modal btn-modal-close">Continuar</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 <footer>
     <div class="f-container">
