@@ -155,6 +155,7 @@ const opciones = document.getElementById("tipo-parentesco");
 const apoderado1 = document.getElementById("apoderado1");
 const apoderado2 = document.getElementById("apoderado2");
 
+const boton = document.getElementById("boton");
 const boton1 = document.getElementById("boton1");
 const boton2 = document.getElementById("boton2");
 const boton3 = document.getElementById("boton3");
@@ -169,8 +170,10 @@ parentesco.addEventListener("change", function () {
 
     if (valorSeleccionado === "0") {
         document.getElementById('responsable').style.display = 'none';
+        document.getElementById('documentos').style.display = 'none';
     } else if (valorSeleccionado === "1") {
         document.getElementById('responsable').style.display = 'flex';
+        document.getElementById('documentos').style.display = 'none';
         const options = ["Eliga una opción", "Padre", "Madre"];
         options.forEach(function (opcion) {
             const newOpcion = document.createElement("option");
@@ -180,6 +183,7 @@ parentesco.addEventListener("change", function () {
         })
     } else {
         document.getElementById('responsable').style.display = 'flex';
+        document.getElementById('documentos').style.display = 'flex';
         const options = ["Eliga una opción", "Abuelo"];
         options.forEach(function (opcion) {
             const newOpcion = document.createElement("option");
@@ -193,36 +197,15 @@ parentesco.addEventListener("change", function () {
 
 /*FUNCIONES PARA MOSTRAR Y OCULTAR FORMULARIOS DEL REGISTER*/
 
-function ocultar1() {
-    if (boton1.value === "1") {
-        document.getElementById('form-tipo-apoderado').style.display = 'block';
-        document.getElementById('form-apoderado').style.display = 'none';
-    } else if (boton1.value === "3") {
-        document.getElementById('form-apoderado-madre').style.display = 'block';
-        document.getElementById('form-apoderado').style.display = 'none';
-    } else {
-        document.getElementById('form-tipo-apoderado').style.display = 'block';
-        document.getElementById('form-apoderado').style.display = 'none';
-    }
-}
-
-function ocultar2() {
-    if (boton3.value === "3") {
-        document.getElementById('form-apoderado-madre').style.display = 'none';
-        document.getElementById('form-apoderado').style.display = 'block';
-    } else {
-        document.getElementById('form-apoderado-madre').style.display = 'none';
-        document.getElementById('form-tipo-apoderado').style.display = 'block';
-    }
-}
-
 function mostrar() {
     apoderado1.textContent = "Padre"
     apoderado2.textContent = "Madre"
     if (opciones.value === "Padre") {
         document.getElementById('form-tipo-apoderado').style.display = 'none';
         document.getElementById('form-apoderado').style.display = 'block';
+        document.getElementById('pss-padre').style.display = 'flex';
         ocultar1;
+        boton.value = "0";
         boton1.value = "1";
         boton2.value = "2";
         boton3.value = "3";
@@ -231,54 +214,96 @@ function mostrar() {
     } else if (opciones.value === "Madre") {
         document.getElementById('form-apoderado-madre').style.display = 'block';
         document.getElementById('form-tipo-apoderado').style.display = 'none';
+        document.getElementById('pss-madre').style.display = 'flex';
         ocultar2;
-        boton3.value = "1";
-        boton4.value = "2";
-        boton1.value = "3";
-        boton2.value = "4";
-        boton5.value = "6";
+        boton.value = "0";
+        boton1.value = "6";
+        boton2.value = "7";
+        boton3.value = "8";
+        boton4.value = "9";
+        boton5.value = "10";
+        document.getElementById('pss-madre').style.display = 'flex';
     } else if (opciones.value === "Abuelo") {
         document.getElementById('form-tipo-apoderado').style.display = 'none';
         document.getElementById('form-apoderado').style.display = 'block';
+        document.getElementById('pss-padre').style.display = 'flex';
         apoderado1.textContent = "Abuelo"
-        boton2.value = "7";
+        boton.value = "0";
+        boton1.value = "11";
+        boton2.value = "12";
+        boton3.value = "13";
+        boton4.value = "14";
+        boton5.value = "15";
+    }
+}
+
+function ocultar1() {
+    if (boton1.value === "1") {
+        document.getElementById('form-tipo-apoderado').style.display = 'block';
+        document.getElementById('form-apoderado').style.display = 'none';
+    } else if (boton1.value === "3") {
+        document.getElementById('form-apoderado-madre').style.display = 'block';
+        document.getElementById('form-apoderado').style.display = 'none';
+    } else if (boton1.value === "6") {
+        document.getElementById('form-apoderado-madre').style.display = 'block';
+        document.getElementById('form-apoderado').style.display = 'none';
+    } else if (boton1.value === "11") {
+        document.getElementById('form-tipo-apoderado').style.display = 'block';
+        document.getElementById('form-apoderado').style.display = 'none';
     }
 }
 
 function mostrar1() {
-    if (boton2.value === "4") {
-        document.getElementById('form-alumno').style.display = 'block';
+    if (boton2.value === "2") {
+        document.getElementById('form-apoderado-madre').style.display = 'block';
         document.getElementById('form-apoderado').style.display = 'none';
+        document.getElementById('pss-madre').style.display = 'none';
     } else if (boton2.value === "7") {
         document.getElementById('form-alumno').style.display = 'block';
         document.getElementById('form-apoderado').style.display = 'none';
-    } else {
+    } else if (boton2.value === "12") {
+        document.getElementById('form-alumno').style.display = 'block';
         document.getElementById('form-apoderado').style.display = 'none';
-        document.getElementById('form-apoderado-madre').style.display = 'block';
     }
 
 }
 
 function mostrar2() {
-    if (boton4.value === "2") {
-        document.getElementById('form-apoderado').style.display = 'block';
-        document.getElementById('form-apoderado-madre').style.display = 'none';
-    } else if (boton4.value === "4") {
-        document.getElementById('form-apoderado-madre').style.display = 'none';
+    if (boton4.value === "4") {
         document.getElementById('form-alumno').style.display = 'block';
+        document.getElementById('form-apoderado-madre').style.display = 'none';
+    } else if (boton4.value === "9") {
+        document.getElementById('form-apoderado-madre').style.display = 'none';
+        document.getElementById('form-apoderado').style.display = 'block';
+        document.getElementById('pss-padre').style.display = 'none';
     }
 }
 
 function ocultar() {
     if (boton5.value === "5") {
         document.getElementById('form-alumno').style.display = 'none';
+        document.getElementById('pss-madre').style.display = 'none';
         document.getElementById('form-apoderado-madre').style.display = 'block';
-    } else {
+    } else if (boton5.value === "10") {
+        document.getElementById('form-alumno').style.display = 'none';
+        document.getElementById('form-apoderado').style.display = 'block';
+        document.getElementById('pss-padre').style.display = 'none';
+    } else if (boton5.value === "15") {
         document.getElementById('form-alumno').style.display = 'none';
         document.getElementById('form-apoderado').style.display = 'block';
     }
 }
 
+function ocultar2() {
+    if (boton3.value === "3") {
+        document.getElementById('form-apoderado-madre').style.display = 'none';
+        document.getElementById('form-apoderado').style.display = 'block';
+        document.getElementById('pss-padre').style.display = 'flex';
+    } else if (boton3.value === "8") {
+        document.getElementById('form-apoderado-madre').style.display = 'none';
+        document.getElementById('form-tipo-apoderado').style.display = 'block';
+    }
+}
 
 /*FUNCIONES PARA LA PARTE DE GRADO Y SECCION*/
 
@@ -315,6 +340,31 @@ nivelAcademicoSelect.addEventListener("change", function () {
         });
     }
 });
+
+/*FUNCIONES PARA AUMENTAR Y DISMINUIR LA CANTIDAD DE ALUMNOS RESGISTRADOS*/
+
+const disminuir = document.getElementById('decrease-btn');
+const aumentar = document.getElementById('increase-btn');
+const cantidadtexto = document.getElementById('cantidad-alumno');
+
+disminuir.addEventListener('click', () => {
+    event.preventDefault();
+    let cantidad = parseInt(cantidadtexto.value);
+    if (cantidad > 1) {
+        cantidad--;
+        cantidadtexto.value = cantidad;
+    }
+});
+
+aumentar.addEventListener('click', () => {
+    event.preventDefault();
+    let cantidad = parseInt(cantidadtexto.value);
+    if (cantidad < 5) {
+        cantidad++;
+        cantidadtexto.value = cantidad;
+    }
+})
+
 
 /*FUNCIONES MODAL PARA FINALIZAR EL REGISTRO*/
 

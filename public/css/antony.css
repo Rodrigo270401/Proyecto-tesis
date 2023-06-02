@@ -34,6 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    height: 550px;
 }
 
 .registro-apoderado h2,
@@ -43,6 +44,10 @@
 
 .formulario-apoderado {
     width: 640px;
+}
+
+.registro-alumno {
+    height: 550px;
 }
 
 .input-box {
@@ -89,6 +94,19 @@
     padding: 11px 15px 11px 15px;
 }
 
+.comentario{
+    width: 400px;
+}
+
+.input-padron-b {
+    height: 45px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #CECECE;
+    background-color: #F9F9F9;
+    padding: 11px 15px 11px 15px;
+}
+
 .boton-container {
     display: flex;
     flex-direction: column;
@@ -120,9 +138,8 @@
 
 .input-box-f {
     display: flex;
-    margin: auto 0;
     padding-bottom: 20px;
-    width: 350px;
+    width: 400px;
 }
 
 .input-box-f label {
@@ -132,10 +149,20 @@
 }
 
 .input-padron-f {
-    margin: auto auto auto 20px;
+    margin: auto 0;
     width: 50px;
     min-width: 50px;
     text-align: center;
+}
+
+.botones-container{
+    margin: 0 0 0 20px;
+}
+
+.btn-aumentar{
+    margin: auto 5px;
+    width: 30px;
+    height: 30px;
 }
 
 .modal-container {
@@ -197,11 +224,15 @@
     background: #0e669c;
 }
 
-#form-apoderado{
+#form-apoderado {
     display: none;
 }
 
-#responsable{
+#responsable {
+    display: none;
+}
+
+#documentos {
     display: none;
 }
 
