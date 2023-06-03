@@ -10,7 +10,7 @@ function OpenSection(e) {
             window.location.href = "/edit-profile.html";
             break;
 
-        case 'logout':
+        case 'logout': 
             window.location.href = "/index.html";
             break;
     }
@@ -389,14 +389,15 @@ const fomrs = document.getElementById("formularios-alumnos");
 function AddCallback(e) {
     switch ($(e).attr('data-action')) {
         case 'add-alumno':
-            if (cantidadtexto.value > 5) {
+            if (cantidadtexto.value == 5) {
                 alert('No se pueden registrar más de 5 alumnos')
             } else {
-                $(e).children('.formularios-container').after(`
+                $('.formularios-container').append(`
+
                 <div class="item-form-alumno">
                 <div class="input-box">
                     <fieldset>
-                        <label for="alumno">Alumnos 01</label>
+                        <label for="alumno">Alumnos ${parseInt(cantidadtexto.value) +1}</label>
                     </fieldset>
                 </div>
                 <div class="formulario-apoderado">
@@ -443,7 +444,15 @@ function AddCallback(e) {
             }
             break;
         case 'rm-alumno':
-            $(e).parent().remove();
+            // $(e).parent().remove();
+            if (cantidadtexto.value > 1) {
+                // $('.formularios-container').remove();
+                $('.item-form-alumno').last().remove();
+            }
+
+            
             break;
     }
 }
+
+// ${countadelivery}

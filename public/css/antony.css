@@ -165,10 +165,22 @@
     height: 30px;
 }
 
+.item-form-alumno {
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 .formularios-container.overflow {
     overflow: auto;
     max-height: 506px;
     padding-right: 30px;
+    background-color: #dfdfdf;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .formularios-container.overflow::-webkit-scrollbar {

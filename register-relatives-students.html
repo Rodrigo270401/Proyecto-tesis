@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/antony.css">
 </head>
-
+ 
 <body>
     <nav>
         <div class="nav-container">
@@ -221,10 +221,9 @@
                         <div class="input-box-f">
                             <label for="cantidad-alumno">Cantidad de alumnos a registrar</label>
                             <div class="botones-container">
-                                <button data-action="rm-alumno" class="btn-aumentar" id="decrease-btn">-</button>
+                                <button class="btn-aumentar" data-action="rm-alumno" id="decrease-btn" onclick="AddCallback($(this));">-</button>
                                 <input type="number" id="cantidad-alumno" class="input-padron-f" value="1" readonly>
-                                <button data-action="add-alumno" class="btn-aumentar" id="increase-btn"
-                                    onclick="AddCallback($(this));">+</button>
+                                <button class="btn-aumentar" data-action="add-alumno" id="increase-btn" onclick="AddCallback($(this));">+</button>
                             </div>
                         </div>
 
@@ -232,7 +231,7 @@
                             <div class="item-form-alumno">
                                 <div class="input-box">
                                     <fieldset>
-                                        <label for="alumno">Alumnos 01</label>
+                                        <label for="alumno">Alumnos 1</label>
                                     </fieldset>
                                 </div>
                                 <div class="formulario-apoderado">
