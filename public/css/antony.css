@@ -94,7 +94,7 @@
     padding: 11px 15px 11px 15px;
 }
 
-.comentario{
+.comentario {
     width: 400px;
 }
 
@@ -155,14 +155,38 @@
     text-align: center;
 }
 
-.botones-container{
+.botones-container {
     margin: 0 0 0 20px;
 }
 
-.btn-aumentar{
+.btn-aumentar {
     margin: auto 5px;
     width: 30px;
     height: 30px;
+}
+
+.formularios-container.overflow {
+    overflow: auto;
+    max-height: 506px;
+    padding-right: 30px;
+}
+
+.formularios-container.overflow::-webkit-scrollbar {
+    background: #0e669c;
+    width: 8px;
+    border-radius: 50px;
+}
+
+.formularios-container.overflow::-webkit-scrollbar-thumb {
+    background-color: #0e669c;
+    border-radius: 50px;
+    height: 40px;
+
+}
+
+.formularios-container.overflow::-webkit-scrollbar-track {
+    background-color: #f1efeb;
+    border-radius: 50px;
 }
 
 .modal-container {

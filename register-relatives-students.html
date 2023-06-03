@@ -221,55 +221,57 @@
                         <div class="input-box-f">
                             <label for="cantidad-alumno">Cantidad de alumnos a registrar</label>
                             <div class="botones-container">
-                                <button class="btn-aumentar" id="decrease-btn">-</button>
-                                <input type="number" id="cantidad-alumno" class="input-padron-f" value="1">
-                                <button class="btn-aumentar" id="increase-btn">+</button>
+                                <button data-action="rm-alumno" class="btn-aumentar" id="decrease-btn">-</button>
+                                <input type="number" id="cantidad-alumno" class="input-padron-f" value="1" readonly>
+                                <button data-action="add-alumno" class="btn-aumentar" id="increase-btn"
+                                    onclick="AddCallback($(this));">+</button>
                             </div>
                         </div>
 
-                        <div class="item-form-alumno">
-
-                            <div class="input-box">
-                                <fieldset>
-                                    <label for="alumno">Alumnos 01</label>
-                                </fieldset>
-                            </div>
-                            <div class="formulario-apoderado">
+                        <div class="formularios-container overflow" id="formularios-alumno">
+                            <div class="item-form-alumno">
                                 <div class="input-box">
-                                    <div class="box">
-                                        <label for="nombre-alumno">Nombres</label>
-                                        <input type="text" placeholder="Ingrese su nombre" id="nombre-alumno"
-                                            class="input-padron">
-                                    </div>
-                                    <div class="box">
-                                        <label for="apellido-alumno">Apellidos</label>
-                                        <input type="text" placeholder="Ingreses sus Apellidos" id="apellido-alumno"
-                                            class="input-padron">
-                                    </div>
+                                    <fieldset>
+                                        <label for="alumno">Alumnos 01</label>
+                                    </fieldset>
                                 </div>
-                                <div class="input-box">
-                                    <div class="box">
-                                        <label for="dni-alumno">DNI</label>
-                                        <input type="number" placeholder="XXXXXXXX" id="dni-alumno"
-                                            class="input-padron">
+                                <div class="formulario-apoderado">
+                                    <div class="input-box">
+                                        <div class="box">
+                                            <label for="nombre-alumno">Nombres</label>
+                                            <input type="text" placeholder="Ingrese su nombre" id="nombre-alumno"
+                                                class="input-padron">
+                                        </div>
+                                        <div class="box">
+                                            <label for="apellido-alumno">Apellidos</label>
+                                            <input type="text" placeholder="Ingreses sus Apellidos" id="apellido-alumno"
+                                                class="input-padron">
+                                        </div>
                                     </div>
-                                    <div class="box">
-                                        <label for="nacimiento-alumno">Fecha de Nacimiento</label>
-                                        <input type="date" id="nacimiento-alumno" class="input-padron">
+                                    <div class="input-box">
+                                        <div class="box">
+                                            <label for="dni-alumno">DNI</label>
+                                            <input type="number" placeholder="XXXXXXXX" id="dni-alumno"
+                                                class="input-padron">
+                                        </div>
+                                        <div class="box">
+                                            <label for="nacimiento-alumno">Fecha de Nacimiento</label>
+                                            <input type="date" id="nacimiento-alumno" class="input-padron">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="input-box">
-                                    <div class="box">
-                                        <label for="nivelacademico">Nivel Académico</label>
-                                        <select class="input-padron" id="nivel-academico">
-                                            <option value="1">Elige una opción</option>
-                                            <option value="2">Primaria</option>
-                                            <option value="3">Secundaria</option>
-                                        </select>
-                                    </div>
-                                    <div class="box">
-                                        <label for="grado">Grado</label>
-                                        <select class="input-padron" id="resultado"> </select>
+                                    <div class="input-box">
+                                        <div class="box">
+                                            <label for="nivelacademico">Nivel Académico</label>
+                                            <select class="input-padron" id="nivel-academico">
+                                                <option value="1">Elige una opción</option>
+                                                <option value="2">Primaria</option>
+                                                <option value="3">Secundaria</option>
+                                            </select>
+                                        </div>
+                                        <div class="box">
+                                            <label for="grado">Grado</label>
+                                            <select class="input-padron" id="resultado"> </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

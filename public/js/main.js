@@ -97,7 +97,7 @@ $('form').submit(function (e) {
                     e.preventDefault()
                     return
                 } else
-                    if (!(EMAIL.val() === 'hola@prueba.com' && PASSWORD.val() === '123456')) {
+                    if (!(EMAIL.val() === 'apoderado@gmail.com' && PASSWORD.val() === '123456')) {
                         MESSAGE.text('Correo electrónico o contraseña incorrectos.')
                         EMAIL.addClass('border-warning')
                         PASSWORD.addClass('border-warning')
@@ -380,4 +380,70 @@ openModal.onclick = function () {
 
 closeModal.onclick = function () {
     modalMensaje.style.visibility = "hidden";
+}
+
+
+/*AGREGAR FORMULARIOS ALUMNO*/
+const fomrs = document.getElementById("formularios-alumnos");
+
+function AddCallback(e) {
+    switch ($(e).attr('data-action')) {
+        case 'add-alumno':
+            if (cantidadtexto.value > 5) {
+                alert('No se pueden registrar más de 5 alumnos')
+            } else {
+                $(e).children('.formularios-container').after(`
+                <div class="item-form-alumno">
+                <div class="input-box">
+                    <fieldset>
+                        <label for="alumno">Alumnos 01</label>
+                    </fieldset>
+                </div>
+                <div class="formulario-apoderado">
+                    <div class="input-box">
+                        <div class="box">
+                            <label for="nombre-alumno">Nombres</label>
+                            <input type="text" placeholder="Ingrese su nombre" id="nombre-alumno"
+                                class="input-padron">
+                        </div>
+                        <div class="box">
+                            <label for="apellido-alumno">Apellidos</label>
+                            <input type="text" placeholder="Ingreses sus Apellidos" id="apellido-alumno"
+                                class="input-padron">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="box">
+                            <label for="dni-alumno">DNI</label>
+                            <input type="number" placeholder="XXXXXXXX" id="dni-alumno"
+                                class="input-padron">
+                        </div>
+                        <div class="box">
+                            <label for="nacimiento-alumno">Fecha de Nacimiento</label>
+                            <input type="date" id="nacimiento-alumno" class="input-padron">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="box">
+                            <label for="nivelacademico">Nivel Académico</label>
+                            <select class="input-padron" id="nivel-academico">
+                                <option value="1">Elige una opción</option>
+                                <option value="2">Primaria</option>
+                                <option value="3">Secundaria</option>
+                            </select>
+                        </div>
+                        <div class="box">
+                            <label for="grado">Grado</label>
+                            <select class="input-padron" id="resultado"> </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                    `)
+            }
+            break;
+        case 'rm-alumno':
+            $(e).parent().remove();
+            break;
+    }
 }
