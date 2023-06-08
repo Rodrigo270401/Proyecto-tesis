@@ -10,7 +10,7 @@ function OpenSection(e) {
             window.location.href = "/edit-profile.html";
             break;
 
-        case 'logout': 
+        case 'logout':
             window.location.href = "/index.html";
             break;
     }
@@ -154,6 +154,7 @@ const parentesco = document.getElementById("parentesco");
 const opciones = document.getElementById("tipo-parentesco");
 const apoderado1 = document.getElementById("apoderado1");
 const apoderado2 = document.getElementById("apoderado2");
+const archivoApoderado = document.getElementById("archivo-apoderado");
 
 const boton = document.getElementById("boton");
 const boton1 = document.getElementById("boton1");
@@ -162,6 +163,31 @@ const boton3 = document.getElementById("boton3");
 const boton4 = document.getElementById("boton4");
 const boton5 = document.getElementById("boton5");
 
+const nombreA = document.getElementById("nombre-apoderado");
+const apellidoA = document.getElementById("apellido-apoderado");
+const correo = document.getElementById("correoelectronico");
+const telefono = document.getElementById("telefono");
+const dni = document.getElementById("dni-apoderado");
+const domicilio = document.getElementById("direccioncasa");
+const trabajo = document.getElementById("direccion");
+const clave1 = document.getElementById("contra");
+const clave2 = document.getElementById("confirmarcontra");
+
+const nombreA1 = document.getElementById("nombre-apoderado1");
+const apellidoA1 = document.getElementById("apellido-apoderado1");
+const correo1 = document.getElementById("correoelectronico1");
+const telefono1 = document.getElementById("telefono1");
+const dni1 = document.getElementById("dni-apoderado1");
+const domicilio1 = document.getElementById("direccioncasa1");
+const trabajo1 = document.getElementById("direccion1");
+const clave11 = document.getElementById("contra1");
+const clave21 = document.getElementById("confirmarcontra1");
+
+const nombreA2 = document.getElementById("nombre-alumno");
+const apellidoA2 = document.getElementById("apellido-alumno");
+const dni2 = document.getElementById("dni-alumno");
+const fechaN = document.getElementById("nacimiento-alumno");
+const nivelA = document.getElementById("nivel-academico");
 
 parentesco.addEventListener("change", function () {
     const valorSeleccionado = parentesco.value;
@@ -224,16 +250,22 @@ function mostrar() {
         boton5.value = "10";
         document.getElementById('pss-madre').style.display = 'flex';
     } else if (opciones.value === "Abuelo") {
-        document.getElementById('form-tipo-apoderado').style.display = 'none';
-        document.getElementById('form-apoderado').style.display = 'block';
-        document.getElementById('pss-padre').style.display = 'flex';
-        apoderado1.textContent = "Abuelo"
-        boton.value = "0";
-        boton1.value = "11";
-        boton2.value = "12";
-        boton3.value = "13";
-        boton4.value = "14";
-        boton5.value = "15";
+        if (archivoApoderado.value === '') {
+            alert("Seleccione un archivo");
+        } else {
+            document.getElementById('form-tipo-apoderado').style.display = 'none';
+            document.getElementById('form-apoderado').style.display = 'block';
+            document.getElementById('pss-padre').style.display = 'flex';
+            apoderado1.textContent = "Abuelo"
+            boton.value = "0";
+            boton1.value = "11";
+            boton2.value = "12";
+            boton3.value = "13";
+            boton4.value = "14";
+            boton5.value = "15";
+        }
+    } else {
+        alert("Seleccione una opción");
     }
 }
 
@@ -255,27 +287,52 @@ function ocultar1() {
 
 function mostrar1() {
     if (boton2.value === "2") {
-        document.getElementById('form-apoderado-madre').style.display = 'block';
-        document.getElementById('form-apoderado').style.display = 'none';
-        document.getElementById('pss-madre').style.display = 'none';
+        if (nombreA.value === "" || apellidoA.value === "" || correo.value === "" || telefono.value === "" || dni.value === "" || domicilio.value === "" || trabajo.value === "" || clave1.value === "" || clave2.value === "") {
+            alert("Por favor, complete los campos");
+        } else if (clave1.value == clave2.value) {
+            document.getElementById('form-apoderado-madre').style.display = 'block';
+            document.getElementById('form-apoderado').style.display = 'none';
+            document.getElementById('pss-madre').style.display = 'none';
+        } else {
+            alert("Las contraseñas no coiciden");
+        }
     } else if (boton2.value === "7") {
-        document.getElementById('form-alumno').style.display = 'block';
-        document.getElementById('form-apoderado').style.display = 'none';
+        if (nombreA.value === "" || apellidoA.value === "" || correo.value === "" || telefono.value === "" || dni.value === "" || domicilio.value === "" || trabajo.value === "") {
+            alert("Por favor, complete los campos");
+        } else {
+            document.getElementById('form-alumno').style.display = 'block';
+            document.getElementById('form-apoderado').style.display = 'none';
+        }
     } else if (boton2.value === "12") {
-        document.getElementById('form-alumno').style.display = 'block';
-        document.getElementById('form-apoderado').style.display = 'none';
+        if (nombreA.value === "" || apellidoA.value === "" || correo.value === "" || telefono.value === "" || dni.value === "" || domicilio.value === "" || trabajo.value === "" || clave1.value === "" || clave2.value === "") {
+            alert("Por favor, complete los campos");
+        } else if (clave1.value == clave2.value) {
+            document.getElementById('form-alumno').style.display = 'block';
+            document.getElementById('form-apoderado').style.display = 'none';
+        } else {
+            alert("Las contraseñas no coiciden");
+        }
     }
-
 }
 
 function mostrar2() {
     if (boton4.value === "4") {
-        document.getElementById('form-alumno').style.display = 'block';
-        document.getElementById('form-apoderado-madre').style.display = 'none';
+        if (nombreA1.value === "" || apellidoA1.value === "" || correo1.value === "" || telefono1.value === "" || dni1.value === "" || domicilio1.value === "" || trabajo1.value === "") {
+            alert("Por favor, complete los campos");
+        } else {
+            document.getElementById('form-alumno').style.display = 'block';
+            document.getElementById('form-apoderado-madre').style.display = 'none';
+        }
     } else if (boton4.value === "9") {
-        document.getElementById('form-apoderado-madre').style.display = 'none';
-        document.getElementById('form-apoderado').style.display = 'block';
-        document.getElementById('pss-padre').style.display = 'none';
+        if (nombreA1.value === "" || apellidoA1.value === "" || correo1.value === "" || telefono1.value === "" || dni1.value === "" || domicilio1.value === "" || trabajo1.value === "" || clave11.value === "" || clave21.value === "") {
+            alert("Por favor, complete los campos");
+        } else if (clave11.value == clave21.value) {
+            document.getElementById('form-apoderado-madre').style.display = 'none';
+            document.getElementById('form-apoderado').style.display = 'block';
+            document.getElementById('pss-padre').style.display = 'none';
+        } else {
+            alert("Las contraseñas no coiciden");
+        }
     }
 }
 
@@ -375,7 +432,11 @@ let closeModal = document.getElementById('closeModal')
 //Abrir Modal
 
 openModal.onclick = function () {
-    modalMensaje.style.visibility = "visible";
+    if (nombreA2.value === "" || apellidoA2.value === "" || dni2.value === "" || fechaN.value === "" || nivelA.value === "1") {
+        alert("Por favor, complete los campos");
+    } else {
+        modalMensaje.style.visibility = "visible";
+    }
 }
 
 closeModal.onclick = function () {
@@ -397,7 +458,7 @@ function AddCallback(e) {
                 <div class="item-form-alumno">
                 <div class="input-box">
                     <fieldset>
-                        <label for="alumno">Alumnos ${parseInt(cantidadtexto.value) +1}</label>
+                        <label for="alumno">Alumnos ${parseInt(cantidadtexto.value) + 1}</label>
                     </fieldset>
                 </div>
                 <div class="formulario-apoderado">
@@ -440,7 +501,7 @@ function AddCallback(e) {
                     </div>
                 </div>
             </div>
-                                    `)
+            `)
             }
             break;
         case 'rm-alumno':
@@ -449,10 +510,6 @@ function AddCallback(e) {
                 // $('.formularios-container').remove();
                 $('.item-form-alumno').last().remove();
             }
-
-            
             break;
     }
 }
-
-// ${countadelivery}

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/antony.css">
 </head>
- 
+
 <body>
     <nav>
         <div class="nav-container">
@@ -65,7 +65,7 @@
                                     <span class="comentario">Lorem ipsum dolor sit a Lorem ipsum dolor sit a Loorem
                                         ipsum dolor sit a Lorem
                                         ipsum dolor sit a</span>
-                                    <input type="file" id="nombre-apoderado" class="input-padron-b">
+                                    <input type="file" id="archivo-apoderado" class="input-padron-b">
                                 </div>
                             </div>
                         </div>
@@ -102,32 +102,34 @@
                                 <div class="box">
                                     <label for="telefono">Teléfono</label>
                                     <input type="number" placeholder="(+51) XXX XXX XXX" id="telefono"
-                                        class="input-padron">
+                                        class="input-padron" maxlength="9"
+                                        oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 </div>
                             </div>
                             <div class="input-box">
                                 <div class="box">
                                     <label for="dni-apoderado">DNI</label>
-                                    <input type="number" placeholder="XXXXXXXX" id="dni-apoderado" class="input-padron">
+                                    <input type="number" placeholder="XXXXXXXX" id="dni-apoderado" class="input-padron"
+                                        maxlength="8"
+                                        oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 </div>
                                 <div class="box">
                                     <label for="dirección">Dirección de Domicilio</label>
-                                    <input type="text" placeholder="Av. Example 213" id="dirección"
+                                    <input type="text" placeholder="Av. Example 213" id="direccioncasa"
                                         class="input-padron">
                                 </div>
                             </div>
                             <div class="input-box">
                                 <div class="box-a">
                                     <label for="dirección-trabajo">Dirección de Trabajo</label>
-                                    <input type="text" placeholder="Av. Example 213" id="dirección"
+                                    <input type="text" placeholder="Av. Example 213" id="direccion"
                                         class="input-padron-a">
                                 </div>
                             </div>
                             <div class="input-box" id="pss-padre">
                                 <div class="box">
                                     <label for="contraseña">Contraseña</label>
-                                    <input type="password" placeholder="***********" id="contraseña"
-                                        class="input-padron">
+                                    <input type="password" placeholder="***********" id="contra" class="input-padron">
                                 </div>
                                 <div class="box">
                                     <label for="confirmarcontra">Confirmar Contraseña</label>
@@ -153,54 +155,56 @@
                             <div class="input-box">
                                 <div class="box">
                                     <label for="nombre-apoderado">Nombres</label>
-                                    <input type="text" placeholder="Ingrese su nombre" id="nombre-apoderado"
+                                    <input type="text" placeholder="Ingrese su nombre" id="nombre-apoderado1"
                                         class="input-padron">
                                 </div>
                                 <div class="box">
                                     <label for="apellido-apoderado">Apellidos</label>
-                                    <input type="text" placeholder="Ingrese sus apellidos" id="apellido-apoderado"
+                                    <input type="text" placeholder="Ingrese sus apellidos" id="apellido-apoderado1"
                                         class="input-padron">
                                 </div>
                             </div>
                             <div class="input-box">
                                 <div class="box">
                                     <label for="correoelectronico">Correo Electrónico</label>
-                                    <input type="email" placeholder="example@example.com" id="correoelectronico"
+                                    <input type="email" placeholder="example@example.com" id="correoelectronico1"
                                         class="input-padron">
                                 </div>
                                 <div class="box">
                                     <label for="telefono">Teléfono</label>
-                                    <input type="number" placeholder="(+51) XXX XXX XXX" id="telefono"
-                                        class="input-padron">
+                                    <input type="number" placeholder="(+51) XXX XXX XXX" id="telefono1"
+                                        class="input-padron" maxlength="9"
+                                        oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 </div>
                             </div>
                             <div class="input-box">
                                 <div class="box">
                                     <label for="dni-apoderado">DNI</label>
-                                    <input type="number" placeholder="XXXXXXXX" id="dni-apoderado" class="input-padron">
+                                    <input type="number" placeholder="XXXXXXXX" id="dni-apoderado1" class="input-padron"
+                                        maxlength="8"
+                                        oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                 </div>
                                 <div class="box">
                                     <label for="dirección">Dirección de Domicilio</label>
-                                    <input type="text" placeholder="Av. Example 213" id="dirección"
+                                    <input type="text" placeholder="Av. Example 213" id="direccioncasa1"
                                         class="input-padron">
                                 </div>
                             </div>
                             <div class="input-box">
                                 <div class="box-a">
                                     <label for="dirección-trabajo">Dirección de Trabajo</label>
-                                    <input type="text" placeholder="Av. Example 213" id="dirección"
+                                    <input type="text" placeholder="Av. Example 213" id="direccion1"
                                         class="input-padron-a">
                                 </div>
                             </div>
                             <div class="input-box" id="pss-madre">
                                 <div class="box">
                                     <label for="contraseña">Contraseña</label>
-                                    <input type="password" placeholder="***********" id="contraseña"
-                                        class="input-padron">
+                                    <input type="password" placeholder="***********" id="contra1" class="input-padron">
                                 </div>
                                 <div class="box">
                                     <label for="confirmarcontra">Confirmar Contraseña</label>
-                                    <input type="password" placeholder="***********" id="confirmarcontra"
+                                    <input type="password" placeholder="***********" id="confirmarcontra1"
                                         class="input-padron">
                                 </div>
                             </div>
@@ -221,9 +225,11 @@
                         <div class="input-box-f">
                             <label for="cantidad-alumno">Cantidad de alumnos a registrar</label>
                             <div class="botones-container">
-                                <button class="btn-aumentar" data-action="rm-alumno" id="decrease-btn" onclick="AddCallback($(this));">-</button>
+                                <button class="btn-aumentar" data-action="rm-alumno" id="decrease-btn"
+                                    onclick="AddCallback($(this));">-</button>
                                 <input type="number" id="cantidad-alumno" class="input-padron-f" value="1" readonly>
-                                <button class="btn-aumentar" data-action="add-alumno" id="increase-btn" onclick="AddCallback($(this));">+</button>
+                                <button class="btn-aumentar" data-action="add-alumno" id="increase-btn"
+                                    onclick="AddCallback($(this));">+</button>
                             </div>
                         </div>
 
@@ -251,7 +257,8 @@
                                         <div class="box">
                                             <label for="dni-alumno">DNI</label>
                                             <input type="number" placeholder="XXXXXXXX" id="dni-alumno"
-                                                class="input-padron">
+                                                class="input-padron" maxlength="8"
+                                                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                         </div>
                                         <div class="box">
                                             <label for="nacimiento-alumno">Fecha de Nacimiento</label>
