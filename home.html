@@ -138,5 +138,11 @@
     <script type="text/javascript">
         new WOW().init();
     </script> 
+    <script>
+        window.onload = function() {
+        // Limpiar los parámetros de consulta
+        window.history.replaceState({}, document.title, window.location.pathname);
+        };
+    </script>
 </body>
 </html>

@@ -25,10 +25,10 @@
                             <img src="../public/img/icons/icon-user-orange.svg" alt="Oben icon">
                         </div>
                         <div class="name-user">
-                            <h2>Administrador</h2>
+                            <h2>Juan</h2>
                         </div>
                         <div class="user-menu-list">
-                            <!-- <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span> -->
+                            <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span>
                             <span class="list logout" onclick="OpenSection($(this));" data-open="logout">Cerrar sesion</span>
                         </div>
                     </a>
@@ -49,43 +49,30 @@
                 <div class="sidebar">
                     <ul>
                         <li>
-                            <a href="../admin/home.html" class="active">
+                            <a href="home.html" class="active">
                                 <i class="icon home"></i>
                                 <span class="item">Inicio</span>
                             </a>
                         </li>                    
                         <li>
-                            <a href="../admin/apoderados.html">
-                                <i class="icon clients"></i> 
-                                <span class="item">Apoderados</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../admin/estudiantes.html">
-                                <i class="icon clients"></i> 
-                                <span class="item">Estudiantes</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../admin/gestion-matricula.html">
+                            <a href="renovar-matricula.html">
                                 <i class="icon fichas"></i>                          
-                                <span class="item">Gestión de matrícula</span>
+                                <span class="item">Renovar matrícula</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../admin/gestion-vacantes.html">
+                            <a href="estado-matricula.html">
                                 <i class="icon docs"></i> 
-                                <span class="item">Gestión de vacantes</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../admin/reporte-matricula.html">
-                                <i class="icon docs"></i> 
-                                <span class="item">Reporte de matrículas</span>
+                                <span class="item">Estado de matrículas</span>
                             </a>
                         </li>
                         
-                                      
+                        <li>
+                            <a href="estudiantes-registrados.html">
+                                <i class="icon clients"></i> 
+                                <span class="item">Estudiantes registrados</span>
+                            </a>
+                        </li>              
                    </ul>
                 </div>
             </div>
@@ -99,28 +86,23 @@
                 <div class="modules">
                     <div class="row-module">
                         <div class="module">
-                            <img src="../public/img/icons/icon-miperfil.png" alt="">                            
-                            <a href="../admin/apoderados.html"><button class="btn-tb-orange btn-home">Apoderados</button></a>
-                        </div>
-                        <div class="module">
-                            <img src="../public/img/icons/icon-estudiantes.png" alt="">
-                            <a href="../admin/estudiantes.html"><button class="btn-tb-orange btn-home">Estudiantes</button></a>
-                        </div>
-                        <div class="module">
                             <img src="../public/img/icons/icon-matricula.png" alt="">
-                            <a href="../admin/gestion-matricula.html"><button class="btn-tb-orange btn-home">Gestión de matrículas</button></a>
+                            <a href="renovar-matricula.html"><button class="btn-tb-orange btn-home">Renovar matrícula</button></a>
+                        </div>
+                        <div class="module">
+                            <img src="../public/img/icons/icon-st-matricula.png" alt="">
+                            <a href="estado-matricula.html"><button class="btn-tb-orange btn-home">Estado de matrícula</button></a>
+                        </div>
+                        <div class="module">
+                            <img src="../public/img/icons/icon-miperfil.png" alt="">
+                            <a href="edit-profile.html"><button class="btn-tb-orange btn-home">Mi perfil</button></a>
                         </div>
                     </div>    
                     
                     <div class="row-module">                        
                         <div class="module">
-                            <img src="../public/img/icons/icon-st-matricula.png" alt="">
-                            <a href="../admin/gestion-vacantes.html"><button class="btn-tb-orange btn-home">Gestión de vacantes</button></a>
-                        </div>
-
-                        <div class="module">
-                            <img src="../public/img/icons/icon-matricula.png" alt="">
-                            <a href="../admin/reporte-matricula.html"><button class="btn-tb-orange btn-home">Reportes de matrículas</button></a>
+                            <img src="../public/img/icons/icon-estudiantes.png" alt="">
+                            <a href="estudiantes-registrados.html"><button class="btn-tb-orange btn-home">Estudiantes registrados</button></a>
                         </div>
                         
                     </div> 
@@ -148,7 +130,7 @@
 </footer>
     <script src="../public/js/jquery.min.js"></script>
     <script src="../public/js/wow.min.js"></script>
-    <script src="../admin/js/main.js"></script>
+    <script src="../old/js/main.js"></script>
     <script type="text/javascript">
         new WOW().init();
     </script> 

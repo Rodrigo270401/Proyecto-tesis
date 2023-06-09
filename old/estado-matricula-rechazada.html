@@ -4,28 +4,28 @@
    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta property="og:image" itemprop="image" content="public/img/icons/opengraph.jpg">
-    <meta property="og:image:alt" content="public/img/icons/opengraph.jpg">
-    <link rel="shortcut icon" href="public/img/icons/favicon.png">
+    <meta property="og:image" itemprop="image" content="../public/img/icons/opengraph.jpg">
+    <meta property="og:image:alt" content="../public/img/icons/opengraph.jpg">
+    <link rel="shortcut icon" href="../public/img/icons/favicon.png">
     <title>B.Group - Estado de Matrícula</title>
     <meta name="description" content="Somos una institución educativa que empodera en nuestros estudiantes su formación integral en lo cognitivo, afectivo, cívico moral y espiritual.."/>
-    <link rel="stylesheet" href="./public/css/animate.css">
-    <link rel="stylesheet" href="./public/css/main.css">
-    <link rel="stylesheet" href="./public/css/rodrigo.css">
+    <link rel="stylesheet" href="../public/css/animate.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/rodrigo.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="nav-logo">
-                <!-- <img src="./public/img/icons/icon-header.png" alt="Oben icon"> -->
+                <!-- <img src="../public/img/icons/icon-header.png" alt="Oben icon"> -->
             </div>
             <div class="nav-user">
                 <a class="nav-options"> 
                     <div class="logo-user-home">
-                        <img src="./public/img/icons/icon-user-orange.svg" alt="Oben icon">
+                        <img src="../public/img/icons/icon-user-orange.svg" alt="Oben icon">
                     </div>
                     <div class="name-user">
-                        <h2>Juan Vivar</h2>
+                        <h2>Juan</h2>
                     </div>
                     <div class="user-menu-list">
                         <span class="list profile" onclick="OpenSection($(this));" data-open="profile">Perfil</span>
@@ -34,7 +34,8 @@
                 </a>
                 
             </div>
-        </div>        
+        </div>
+        
     </nav>
 
     <section>
@@ -44,7 +45,7 @@
             <div class="wrapper">
 
                 <div class="nav-logo-new">
-                    <img src="./public/img/icons/icon-header.png" alt="Oben icon">
+                    <img src="../public/img/icons/icon-header.png" alt="Oben icon">
                 </div>
 
                 <div class="sidebar">
@@ -56,13 +57,13 @@
                             </a>
                         </li>                    
                         <li>
-                            <a href="generar-matricula.html">
+                            <a href="renovar-matricula.html">
                                 <i class="icon fichas"></i>                          
-                                <span class="item">Generar matrícula</span>
+                                <span class="item">Renovar matrícula</span>
                             </a>
                         </li>
                         <li>
-                            <a href="estado-matricula.html"  class="active">
+                            <a href="estado-matricula.html" class="active">
                                 <i class="icon docs"></i> 
                                 <span class="item">Estado de matrículas</span>
                             </a>
@@ -89,15 +90,12 @@
                         <div class="title"><h2>Seleccionar estudiante</h2></div>
                         <div class="box-filtro">
                             <div class="intranet-select c-witdh"><!-- Custom select for intranet-->
-                                <h1>Luis Angel Camacho Gutierrez</h1><!-- Placeholder-->
+                                <h1>Juan Manuel Camacho Gutierre</h1><!-- Placeholder-->
                                         <div class="i-options"> <!-- Options -->
-                                            <a class="op-alumno" href="estado-matricula.html"><span value="opcion 1" selected>Luis Angel Camacho Gutierrez</span></a>
-                                            <a class="op-alumno" href="estado-matricula-rechazada.html"><span value="opcion 2">Juan Manuel Camacho Gutierrez</span></a>
-                                            <a class="op-alumno" href="estado-matricula-correccion.html"><span value="opcion 3" >Ana Maria  Camacho Gutierrez</span></a>
-                                            <a class="op-alumno" href="estado-matricula-aprobada.html"><span value="opcion 4" >Carlos Antonio  Camacho Gutierrez</span></a>
-                                            <a class="op-alumno" href="estado-matricula-validacion.html"><span value="opcion 5" >Laura Sofia Camacho Gutierrez</span></a>
-                                            <a class="op-alumno" href="estado-matricula-pagado.html"><span value="opcion 6" >Jose Antonio Camacho Gutierrez</span></a>
-                                            <a class="op-alumno" href="estado-matricula-vacio.html"><span value="opcion 7" >Diego Percy Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula.html"><span value="opcion 1">Luis Angel Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-rechazada.html"><span value="opcion 2" selected>Juan Manuel Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-aprobada.html"><span value="opcion 3" >Carlos Antonio  Camacho Gutierrez</span></a>
+                                            <a class="op-alumno" href="estado-matricula-vacio.html"><span value="opcion 4" >Diego Percy Camacho Gutierrez</span></a>     
                                          </div>
                             </div>
                         </div>                        
@@ -107,12 +105,12 @@
                 <div class="status-estado">
                     <div class="box-estado">
                         <h1>Estado:</h1>
-                        <div class="box-item"><h2>En evaluación</h2></div>
+                        <div class="box-item rechazado"><h2>Rechazada</h2></div>
                     </div>
 
                     <div class="info-estado">
-                        <h1>Le informo que su solicitud de matrícula se encuentra actualmente en proceso de evaluación. Esto significa que nuestra área administrativa se encuentra revisando minuciosamente los documentos adjuntos que nos ha proporcionado, a fin de determinar si cumplen con los requisitos necesarios para proceder con el proceso de matrícula para el presente año escolar. Le agradecemos por su paciencia mientras realizamos este proceso de revisión.</h1>
-                        <img src="public/img/icons/icon-estado-evaluacion.png" alt="">
+                        <h1>Lamentablemente, debo informarle que su solicitud de matrícula para su hijo ha sido rechazada. Nuestro sistema de aprobación ha evaluado los documentos adjuntos y ha determinado que no cumplen con los requisitos necesarios para garantizar que el estudiante esté en óptimas condiciones para el proceso de matrícula del presente año escolar.</h1>
+                        <img src="../public/img/icons/icon-estado-rechazado.png" alt="">
                     </div>
 
                 </div>
@@ -157,9 +155,9 @@
             </div>
         </div>
     </footer>
-    <script src="./public/js/jquery.min.js"></script>
-    <script src="./public/js/wow.min.js"></script>
-    <script src="./public/js/main.js"></script>
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/wow.min.js"></script>
+    <script src="../old/js/main.js"></script>
     <script type="text/javascript">
         new WOW().init();
     </script> 
